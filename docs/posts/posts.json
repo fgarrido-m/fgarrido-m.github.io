@@ -1,19 +1,38 @@
 [
   {
+    "path": "posts/2022-08-25-valor-p/",
+    "title": "Valor P",
+    "description": "Es solo una prueba de lo que se hace en el taller de valor-p",
+    "author": [
+      {
+        "name": "Felipe Garrido",
+        "url": "https://fgarrido-m.github.io/"
+      }
+    ],
+    "date": "2022-08-18",
+    "categories": [
+      "Talleres"
+    ],
+    "contents": "\n\n\nlibrary(tidyverse)\nlibrary(sjmisc)\nlibrary(haven)\nlibrary(kableExtra)\n\n\n\n\ndf_lapop_chile <- readRDS(\"lapop_chile_220824.rds\")\n\n\n\n\nhistograma <- df_lapop_chile %>% \n  ggplot(aes(x = q2)) +\n  geom_histogram()\n\nhistograma\n\n\n\n\n\ndf_lapop_chile %>% \n  ggplot(aes(x = q2)) +\n  geom_histogram() +\n  facet_grid(~year) +\n  theme_minimal()\n\n\n\n\n\n\n",
+    "preview": "posts/2022-08-25-valor-p/valor-p_files/figure-html5/unnamed-chunk-2-1.png",
+    "last_modified": "2022-08-25T19:45:21-04:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/welcome/",
     "title": "Welcome to paradais",
     "description": "Welcome to our new blog, paradais. We hope you enjoy \nreading what we have to say!",
     "author": [
       {
-        "name": "Nora Jones",
-        "url": "https://example.com/norajones"
+        "name": "Felipe Garrido",
+        "url": "https://fgarrido-m.github.io/"
       }
     ],
     "date": "2022-08-18",
     "categories": [],
     "contents": "\n\n\n\n",
     "preview": {},
-    "last_modified": "2022-08-18T20:57:48-04:00",
+    "last_modified": "2022-08-25T19:44:51-04:00",
     "input_file": {}
   }
 ]

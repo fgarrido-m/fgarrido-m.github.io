@@ -1,0 +1,94 @@
+---
+title: "Valor P"
+description: |
+  Es solo una prueba de lo que se hace en el taller de valor-p
+author:
+  - name: Felipe Garrido
+    url: https://fgarrido-m.github.io/
+date: 25-08-2022
+categories: 
+  - Talleres
+output:
+  distill::distill_article:
+    self_contained: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r paquetes, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(sjmisc)
+library(haven)
+library(kableExtra)
+```
+
+```{r}
+df_lapop_chile <- readRDS("lapop_chile_220824.rds")
+```
+
+```{r}
+histograma <- df_lapop_chile %>% 
+  ggplot(aes(x = q2)) +
+  geom_histogram()
+
+histograma
+```
+
+```{r}
+df_lapop_chile %>% 
+  ggplot(aes(x = q2)) +
+  geom_histogram() +
+  facet_grid(~year) +
+  theme_minimal()
+```
+
+```{r}
+df_lapop_chile %>% 
+  ggplot(aes(x = q2)) +
+  geom_histogram(color = "#ffafcc", fill = "#ffc8dd", alpha = 0.5) + # Colores
+  geom_density(aes(y = ..count..), color = "#ff006e") + # Gráfico de densidad
+  scale_x_continuous(breaks = seq(0,100, by = 10)) +
+  labs(title = "Figura 2. Histograma de las edades de los encuestados en el\nBarómetro de las Américas, ola 2006 y 2008.", x = "Edad", y = "Frecuencia") + # Títulos
+  facet_grid(rows = vars(year)) +
+  theme_minimal(base_family = "Wingdings")
+```
+
+```{r}
+frq(df_lapop_chile, year)
+```
+
+```{r}
+df_lapop_chile %>% 
+  filter(year == 2008) %>% 
+  frq(., eff1)
+```
+
+```{r, message=FALSE}
+df_lapop_chile %>% 
+  filter(year == 2008) %>% 
+  ggplot(aes(x = as.factor(eff1)))+
+  geom_bar(color = "#000000", fill = "#000000", alpha = 0.1) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 18)) +
+  labs(title = "Figura 3. Gráfico de baras 'Interés del gobierno' (EFF1) para el año 2008.", 
+       subtitle = "Pregunta: 'A los que gobiernan el país le interesalo que piensa la gente como usted ¿Hasta qué punto está de acuerdo o en desacuerdo con esta frase?'",
+       x = " ", y = "Frecuencia")+
+  theme_minimal(base_family = "Times New Roman")
+```
+
+```{r}
+df_lapop_chile %>% 
+  filter(year == 2008) %>% 
+  ggplot(aes(x = as.factor(eff1), y =q2))+
+  geom_boxplot(color = "#fbff12", fill = "#41ead4", alpha = 1) +
+  geom_jitter(shape = 16, position = position_jitter(0.2), color = "#ff01fb") +
+  stat_summary(fun = mean, colour = "black", geom = "text", show.legend = FALSE,
+               vjust = -0.7, family = "Times New Roman",
+               aes(label = round(..y.., digits = 1))) + 
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+   labs(title = "Figura 4. Boxplot 'Interés del gobierno' (EFF1) por edad de los encuestados (q2) para el año 2008.",
+       subtitle = "Pregunta: 'A los que gobiernan el país le interesa lo que piensa la gente como usted\n¿Hasta qué punto está de acuerdo o en desacuerdo con esta frase?'", 
+       x = " ", y = "Edad") +
+  theme_void(base_family = "Wingdings")
+```
+
+
