@@ -1,5 +1,24 @@
 [
   {
+    "path": "posts/2022-09-01-entrega-1-definiciones/",
+    "title": "Entrega 1: definiciones",
+    "description": "Primera entrega para el trabajo de ICP5006",
+    "author": [
+      {
+        "name": "Felipe Garrido",
+        "url": "https://fgarrido-m.github.io/"
+      }
+    ],
+    "date": "2022-09-01",
+    "categories": [
+      "Trabajo"
+    ],
+    "contents": "\nEl trabajo que se desarrollará durante el semestre proviene de un\ninterés tanto en la participación ciudadana, confianza en las\ninstituciones, como la corrupción, en el ámbito de la política\nsubnacional chilena. En la tesis que desarrollé en 2021 se encuentra que\nunas de las potenciales razones para la participación ciudadana en la\ncomuna de Lo Barnechea es la efectividad de la municipalidad para\ncumplir con sus obligaciones, esto a pesar de los casos de corrupción\nconocidos por los vecinos. Esto se contrasta con Estación Central, cuya\npoblación desconfía de la institucionalidad por lo que no participa\nactivamente en espacios como son las juntas de vecinos. Surge la duda\nfinalmente si es que en el resto del territorio chileno se cumple esta\nrelación, es decir, esta dinámica es normal en todas las comunas y\nmunicipalidades de Chile.\nPara esto definimos entonces un número de variables de interés para\neste trabajo:\na) Participación ciudadana\nParticipación ciudadana en estos casos no refiere exclusivamente a la\nparticipación en los espacios clásicos como el voto durante las\nelecciones rutinarias. La idea es medir también la participación en los\nespacios de democracia directa y participativa, como son las juntas de\nvecinos y otras organizaciones de la sociedad civil a nivel local.\nb) Confianza en las\ninstituciones\nUno de los objetivos del trabajo que se buscará durante el semestre\nes encontrar la mejor forma de medir la apreciación de la ciudadanía en\nsus instituciones. En este caso lo que nos interesa es la municipalidad\ny cuales son las apreciaciones de las personas hacia esta política local\ny como es que esta potencialmente afecta la participación ciudadana de\nlos vecinos. Esto finalmente entra dentro del marco de la cultura\npolítica que se puede desarrollar dentro de un subdivisión territorial\ncomo es una comuna, la cultura política se va a entender bajo lo que\nplantean Almond y Verba en su texto clásico de 1980 The Civic\nCulture\nc) Corrupción\nUno de los grandes problemas de la sociedad moderna es la percepción\nde la corrupción en las instituciones democráticas. Sin embargo, dado a\nlo encontrado en mi previa investigación de carácter más cualitativo hay\ncasos en que la corrupción no parece ser un problema sustantivo para los\nvecinos. En este sentido esta variable entra en el estudio con el\nobjetivo de analizar si es que es efectivamente una variable\ninterviniente en la apreciación de las instituciones y en la\nparticipación ciudadana.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-09-01T23:51:35-04:00",
+    "input_file": "entrega-1-definiciones.knit.md"
+  },
+  {
     "path": "posts/2022-08-25-valor-p/",
     "title": "Valor P",
     "description": "Es solo una prueba de lo que se hace en el taller de valor-p",

@@ -90,5 +90,3 @@ df_lapop_chile %>%
        x = " ", y = "Edad") +
   theme_void(base_family = "Wingdings")
 ```
-
-

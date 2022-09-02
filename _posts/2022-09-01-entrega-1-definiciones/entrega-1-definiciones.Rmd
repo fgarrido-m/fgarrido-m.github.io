@@ -1,0 +1,34 @@
+---
+title: "Entrega 1: definiciones"
+description: |
+  Primera entrega para el trabajo de ICP5006
+author:
+  - name: Felipe Garrido
+    url: https://fgarrido-m.github.io/
+date: 2022-09-01
+categories:
+  - Trabajo
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+El trabajo que se desarrollará durante el semestre proviene de un interés tanto en la participación ciudadana, confianza en las instituciones, como la corrupción, en el ámbito de la política subnacional chilena. En la tesis que desarrollé en 2021 se encuentra que unas de las potenciales razones para la participación ciudadana en la comuna de Lo Barnechea es la efectividad de la municipalidad para cumplir con sus obligaciones, esto a pesar de los casos de corrupción conocidos por los vecinos. Esto se contrasta con Estación Central, cuya población desconfía de la institucionalidad por lo que no participa activamente en espacios como son las juntas de vecinos. Surge la duda finalmente si es que en el resto del territorio chileno se cumple esta relación, es decir, esta dinámica es normal en todas las comunas y municipalidades de Chile.
+
+Para esto definimos entonces un número de variables de interés para este trabajo:
+
+#### a) Participación ciudadana
+Participación ciudadana en estos casos no refiere exclusivamente a la participación en los espacios clásicos como el voto durante las elecciones rutinarias. La idea es medir también la participación en los espacios de democracia directa y participativa, como son las juntas de vecinos y otras organizaciones de la sociedad civil a nivel local. 
+
+#### b) Confianza en las instituciones
+Uno de los objetivos del trabajo que se buscará durante el semestre es encontrar la mejor forma de medir la apreciación de la ciudadanía en sus instituciones. En este caso lo que nos interesa es la municipalidad y cuales son las apreciaciones de las personas hacia esta política local y como es que esta potencialmente afecta la participación ciudadana de los vecinos. Esto finalmente entra dentro del marco de la cultura política que se puede desarrollar dentro de un subdivisión territorial como es una comuna, la cultura política se va a entender bajo lo que plantean Almond y Verba en su texto clásico de 1980 The Civic Culture 
+
+#### c) Corrupción
+Uno de los grandes problemas de la sociedad moderna es la percepción de la corrupción en las instituciones democráticas. Sin embargo, dado a lo encontrado en mi previa investigación de carácter más cualitativo hay casos en que la corrupción no parece ser un problema sustantivo para los vecinos. En este sentido esta variable entra en el estudio con el objetivo de analizar si es que es efectivamente una variable interviniente en la apreciación de las instituciones y en la participación ciudadana. 
+
