@@ -6,39 +6,38 @@ author:
   - name: Felipe Garrido
     url: https://fgarrido-m.github.io/
 date: 2022-09-25
+categories: 
+ - Trabajo
 output:
   distill::distill_article:
     self_contained: false
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Dadas las breves definiciones previas para el análisis que comprenderá este trabajo, vale la pena hacer unas definiciones más explícitas y extensas sobre que es lo que se considera. Nuevamente se comprenderán tres variables principales: a) Participación ciudadana, b) Confianza en las instituciones y c) Corrupción. Además de esto se busca presentar una operacionalización de estas variables, es decir, como se buscará producir la medición necesaria para lograr los objetivos de este trabajo, explorar las relaciones que se producen entre la participación ciudadana y la confianza en las instituciones y cuando toma relevancia la corrupción en el nivel subancional en Chile. 
+Dadas las breves definiciones previas para el análisis que comprenderá este trabajo, vale la pena hacer unas definiciones más explícitas y extensas sobre que es lo que se considera. Nuevamente se comprenderán tres variables principales: a) Participación ciudadana, b) Confianza en las instituciones y c) Corrupción. Además de esto se busca presentar una operacionalización de estas variables, es decir, como se buscará producir la medición necesaria para lograr los objetivos de este trabajo, explorar las relaciones que se producen entre la participación ciudadana y la confianza en las instituciones y cuando toma relevancia la corrupción en el nivel subancional en Chile.
 
 ### A. Participación Ciudadana
 
 #### i. Definición
 
-De una manera poco elegante la participación ciudadana implica normalmente cualquier forma de participación que vaya más allá del mero hecho de votar en las elecciones rutinarias por representantes políticos. Muchas veces es visto como una forma de profundizar la democracia dentro de les ciudadanes, dando rienda suelta a variadas versiones de democracia entre las que se encuentran deliberativa, directa, agonistica, etc. (Smith, 2009). En Chile la experiencia de la participación ciudadana es mediada por la existencia de la dictadura y su definición de política que lo aleja de la población (De la Fuente, 2013). La recuperación democrática en Chile implica la inclusión de la cuidadanía y un esfuerzo explícito por parte de los gobiernos de Lagos y Bachelet de volver a llevar la democracia a la ciudadanía (De la Fuente, 2013). Esto refleja las definiciones de democracia participativa que plantea Pateman (1970) cuando menciona la importancia de llevar instancias democráticas a espacios cercanos para el común de las personas cómo el lugar de empleo y los barrios. Debido a la dificultad chilena de sindicalización, una atadura de la época dictatorial, se toma la democracia participativa en esta otra dimensión, siendo importante lo territorial, que se aplica fácilmente a lo que se busca medir en este trabajo: el espacio subnacional. 
+De una manera poco elegante la participación ciudadana implica normalmente cualquier forma de participación que vaya más allá del mero hecho de votar en las elecciones rutinarias por representantes políticos. Muchas veces es visto como una forma de profundizar la democracia dentro de les ciudadanes, dando rienda suelta a variadas versiones de democracia entre las que se encuentran deliberativa, directa, agonistica, etc. (Smith, 2009). En Chile la experiencia de la participación ciudadana es mediada por la existencia de la dictadura y su definición de política que lo aleja de la población (De la Fuente, 2013). La recuperación democrática en Chile implica la inclusión de la cuidadanía y un esfuerzo explícito por parte de los gobiernos de Lagos y Bachelet de volver a llevar la democracia a la ciudadanía (De la Fuente, 2013). Esto refleja las definiciones de democracia participativa que plantea Pateman (1970) cuando menciona la importancia de llevar instancias democráticas a espacios cercanos para el común de las personas cómo el lugar de empleo y los barrios. Debido a la dificultad chilena de sindicalización, una atadura de la época dictatorial, se toma la democracia participativa en esta otra dimensión, siendo importante lo territorial, que se aplica fácilmente a lo que se busca medir en este trabajo: el espacio subnacional.
 
 #### ii. Operacionalización
 
-Tomando en cuenta la breve definición hecha a sobre la participación ciudadana en Chile, debemos analizar como es que vamos a medirla. En el caso de este trabajo buscaremos la participación ciudadana en el barrio, en el territorio, finalmente en la comuna. Dada la experiencia previa en otros trabajos, he visto como periódicamente se ha desarticulado la forma básica de participación ciudadana en Chile: la junta de vecinos. La junta de vecinos tiene una larga data de existencia en el país, apareciendo en 1887, con la Ley de Organización y Atribuciones Municipales (Cáceres et al, 1983). Dada la historia chilena y la importancia de la junta de vecinos como lugar de participación democrática primaria, en este trabajo se operacionalizará la Participación Ciudadana como el nivel de participación en juntas de vecinos de cada comuna. Sin embargo, debido a la desarticulación de esta durante la dictadura y los primeros diez años de democracia (De la Fuente, 2013), se buscará complementar con participación en otros tipos de organizaciones, pero estrictamente al nivel comunal. 
-
+Tomando en cuenta la breve definición hecha a sobre la participación ciudadana en Chile, debemos analizar como es que vamos a medirla. En el caso de este trabajo buscaremos la participación ciudadana en el barrio, en el territorio, finalmente en la comuna. Dada la experiencia previa en otros trabajos, he visto como periódicamente se ha desarticulado la forma básica de participación ciudadana en Chile: la junta de vecinos. La junta de vecinos tiene una larga data de existencia en el país, apareciendo en 1887, con la Ley de Organización y Atribuciones Municipales (Cáceres et al, 1983). Dada la historia chilena y la importancia de la junta de vecinos como lugar de participación democrática primaria, en este trabajo se operacionalizará la Participación Ciudadana como el nivel de participación en juntas de vecinos de cada comuna. Sin embargo, debido a la desarticulación de esta durante la dictadura y los primeros diez años de democracia (De la Fuente, 2013), se buscará complementar con participación en otros tipos de organizaciones, pero estrictamente al nivel comunal.
 
 ### B. Confianza en las instituciones
 
 #### i. Definición
 
-Como fue mencionado previamente la fuente de esta variable se encuentra en la idea de la cultura política de Almond y Verba (1963). Se define la cultura política como un conjunto de orientaciones evaluativas, afectivas y cognitivas hacia una serie de objetos políticos. Sin embargo hay otros estudios neurocientíficos posteriores que hacen dudar de las diferencias reales entre lo cognitivo y lo afectivo y su efecto en lo evaluativo (Marcus, 2013; Eagly y Chaiken, 1998). A pesar de lo anterior, el punto de Almond y Verba (1963) se mantiene, particularmente con respecto a los objetos políticos hacia los que se manifiestan estas orientaciones. Para los autores son cuatro: 1. La institucionalidad en sí, 2. El rol que tiene el individuo dentro de la política, 3. La forma en que se desarrolla la política y 4. Los outcomes de estos procesos políticos. Además, se menciona que puede haber congruencia entre el tipo de sistema político y las orientaciones que tiene el individuo, sobretodo en términos de lealtad o alienación respecto del sistema, dada si las orientaciones son positivas o negativas. 
+Como fue mencionado previamente la fuente de esta variable se encuentra en la idea de la cultura política de Almond y Verba (1963). Se define la cultura política como un conjunto de orientaciones evaluativas, afectivas y cognitivas hacia una serie de objetos políticos. Sin embargo hay otros estudios neurocientíficos posteriores que hacen dudar de las diferencias reales entre lo cognitivo y lo afectivo y su efecto en lo evaluativo (Marcus, 2013; Eagly y Chaiken, 1998). A pesar de lo anterior, el punto de Almond y Verba (1963) se mantiene, particularmente con respecto a los objetos políticos hacia los que se manifiestan estas orientaciones. Para los autores son cuatro: 1. La institucionalidad en sí, 2. El rol que tiene el individuo dentro de la política, 3. La forma en que se desarrolla la política y 4. Los outcomes de estos procesos políticos. Además, se menciona que puede haber congruencia entre el tipo de sistema político y las orientaciones que tiene el individuo, sobretodo en términos de lealtad o alienación respecto del sistema, dada si las orientaciones son positivas o negativas.
 
 #### ii. Operacionalización
 
 Vemos que el concepto de cultura política de Almond y Verba abarca bastantes aspectos y que cada uno puede ser operacionalizado de una manera en particular. Es más, ellos ya encuentran la posibilidad de la alienación como uno de los resultados de las orientaciones negativas hacia las instituciones. No está demás recordar como es que la alienación puede efectivamente cohibir la participación ciudadana en los espacios previamente mencionados. Dados los hallazgos previos que encontré en mi tesis, es coherente para los objetivos de esta investigación el trabajar analizando las orientaciones hacia el cuarto tipo de objeto político: los outputs. Esto debido a que se acerca más a lo que se busca modelar, como es que la valoración hacia las municipalidades y las consecuencias de su trabajo puede afectar la participación cidadana en otras áreas de participación ciudadana. Entonces lo que se quiere medir con esta variable es la percepción de la ciudadanía hacia los outputs políticos de las municipalidades.
-
 
 ### C. Corrupción
 
@@ -48,19 +47,19 @@ Parece ser que la corrupción es el concepto que es más fácil describir, pues 
 
 #### ii. Operacionalización
 
-De las tres variables que se van a analizar una de las más difíciles para operacionalizar de manera directa es la corrupción. Esto es porque debido a la forma en que esta funciona en la realidad y es como menciona Orellana (2004), es subrepticia, por lo que es difícil medirla de manera concreta y fiable. Sin embargo, como es común dentro del estudio de la corrupción no se debe medir la corrupción en sí, sino más bien la percepción de la ciudadanía, es decir, que tan corruptas son las instituciones a los ojos de las personas. Esta es la misma operacionalización que crean por ejemplo Bustos y Morales (2014), pues ven como la gente percibe sus instituciones locales. Esto es beneficioso en tanto que lo que nos importa es como la corrupción puede afectar a les ciudadanes y su participación, por lo que medir la percepción en vez de números objetivos no debería ser un problema. 
+De las tres variables que se van a analizar una de las más difíciles para operacionalizar de manera directa es la corrupción. Esto es porque debido a la forma en que esta funciona en la realidad y es como menciona Orellana (2004), es subrepticia, por lo que es difícil medirla de manera concreta y fiable. Sin embargo, como es común dentro del estudio de la corrupción no se debe medir la corrupción en sí, sino más bien la percepción de la ciudadanía, es decir, que tan corruptas son las instituciones a los ojos de las personas. Esta es la misma operacionalización que crean por ejemplo Bustos y Morales (2014), pues ven como la gente percibe sus instituciones locales. Esto es beneficioso en tanto que lo que nos importa es como la corrupción puede afectar a les ciudadanes y su participación, por lo que medir la percepción en vez de números objetivos no debería ser un problema.
 
 ### Referencias Bibiliográficas
 
 Almond, G. A., & Verba, S. (1963). The civic culture: Political attitudes and democracy in five nations. Princeton University Press.
 
-Bustos, M. & Morales, M. C. (2014). Una mirada a la ley de transparencia en chile: Aspectos que condicionan su logro en lo municipal. Via Inveniendi Et Iudicandi, 9(2), 41-59. doi:https://doi-org.pucdechile.idm.oclc.org/10.15332/s1909-0528.2014.0002.02
+Bustos, M. & Morales, M. C. (2014). Una mirada a la ley de transparencia en chile: Aspectos que condicionan su logro en lo municipal. Via Inveniendi Et Iudicandi, 9(2), 41-59. <doi:https://doi-org.pucdechile.idm.oclc.org/10.15332/s1909-0528.2014.0002.02>
 
-Cáceres J., G. (1983). Algunos antecedentes sobre la génesis de las juntas de vecinos en  Chile. Revista de trabajo social [artículo de revista].
+Cáceres J., G. (1983). Algunos antecedentes sobre la génesis de las juntas de vecinos en Chile. Revista de trabajo social [artículo de revista].
 
-De la Fuente, G. (2013) Mitos y realidades de la participación ciudadana en Chile. En De la Fuente, G. & Mlynarz, D. (Eds.) El pueblo unido: mitos y realidades de la participación   ciudaana en Chile. (pp. 15-38). Ediciones Universidad Alberto Hurtado.
+De la Fuente, G. (2013) Mitos y realidades de la participación ciudadana en Chile. En De la Fuente, G. & Mlynarz, D. (Eds.) El pueblo unido: mitos y realidades de la participación ciudaana en Chile. (pp. 15-38). Ediciones Universidad Alberto Hurtado.
 
-Eagly, A. & Chaiken S. (1998) Attitude Structure and Function. En Gilbert, D., S. Fiske & G. Lindzey (Eds.), The Handbook of Social Psychology (pp. 269-310). McGraw Hill. 
+Eagly, A. & Chaiken S. (1998) Attitude Structure and Function. En Gilbert, D., S. Fiske & G. Lindzey (Eds.), The Handbook of Social Psychology (pp. 269-310). McGraw Hill.
 
 Marcus, G. E. (2013). Political psychology: Neuroscience, genetics, and politics. Oxford University Press.
 
@@ -69,4 +68,3 @@ Pateman, Carole (1970). Participation and Democratic Theory. Cambridge: Cambridg
 Orellana Vargas, P. (2004). Probidad y corrupción en Chile. El punto de quiebre. Polis. Revista Latinoamericana, (8).
 
 Smith, G. (2009). Democratic innovations: Designing institutions for citizen participation. Cambridge University Press.
-

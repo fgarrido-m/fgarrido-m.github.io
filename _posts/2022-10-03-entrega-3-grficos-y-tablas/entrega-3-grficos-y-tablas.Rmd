@@ -1,0 +1,120 @@
+---
+title: "Entrega 3: gráficos y tablas"
+description: |
+  Tercera entrega para el trabajo de ICP5006
+author:
+  - name: Felipe Garrido
+    url: https://fgarrido-m.github.io/
+date: 2022-10-03
+categories:
+  - Trabajo
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+library(haven)
+library(tidyverse)
+library(kableExtra)
+library(sjmisc)
+```
+
+Para poder medir las dos primeras variables, se utiliza una base de datos desarrollada por RIMISP en base a la Encuesta de Dinámicas Territoriales y Bienestar -EDTB- (La base de datos se puede encontrar en el siguiente link: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/G9ENDE). Esta encuesta se realiza en comunas de cuidades medianas y pequeñas de tres países, pero dividen las bases de datos según países, siendo la que se utiliza la chilena. La EDTB pregunta una serie de información a vecinos de estas comunas sobre el bienestar y características sociodemográficas, pero para esto realizamos una serie de filtros para dejar las preguntas más relevantes. Se dejan algunas de las preguntas básicas sobre género, nivel educacional, nombre de la comuna y otros. Además se deja la pregunta l_15h que consulta sobre la participación del vecino en organzaciones vecinales, principalmente juntas de vecinos. Además hay preguntas sobre los outputs políticos en la entrega de servicios como la seguridad, recolección de basura, mantenimiento de calles y protección civil (1_19a, b, c y d). Esto nos deja con las variables que más se requieren para esta investigación. Otras variables que podrían ser interesantes en el futuro son si participan en las elecciones municipales (l_1 y l_5), interés en asuntos políticos (l_6, l_8), medición de cohesión vecinal (l_12,l_16a), acercamiento a autoridades (l_16b) y satisfacción con la comunidad y sus autoridades (m_3d, e y f)
+
+```{r}
+participacion_df <- read_dta("e1_chile_especiales_1.dta")
+
+colnames(participacion_df)
+
+df_part_corta <- participacion_df %>% 
+  select(region, comuna, tipo_localidad, edad_informada, genero, laboralmente, j_4_c1, l_1, l_5, l_6, l_8, l_12, l_15h, l_16a, l_16b, l_19a, l_19b,l_19c, l_19d, m_3d, m_3e, m_3f)
+
+saveRDS(df_part_corta, file = "especiales_1_acotadas.rds")
+
+rm(participacion_df)
+```
+
+El primer gráfico a analizar es el de la participación en organizaciones vecinales. La pregunta está dispuesta en una respuesta dicotómica y vemos que la gran mayoría de personas no participan en organizaciones vecinales.
+
+```{r}
+df_part_corta %>% 
+  ggplot(aes(x = as.factor(l_15h))) +
+  geom_bar(color = '#000000' , alpha = 0.5)+
+  labs(title = "Figura 1. Gráfico de barras 'Participación en organización vecinal'(l_15h)",
+       subtitle = "Pregunta: '¿En el último año usted ha participado de manera activa en alguno de los siguientes grupos u organizaciones? Organización vecinal (asociación de vivienda o junta de vecinos)'",
+       x= "", y = "Frecuencia") +
+  scale_x_discrete(breaks= c("1", "2", "9"),
+                   labels = c("Si", "No", "No sabe/No Responde"))+
+  theme_minimal()
+```
+
+Luego vemos las variables que miden la evaluación de servicios comunales, lo cual puede ser entendido como una evaluación de los outputs políticos definidos en la segunda entrega. 
+
+```{r}
+frq(df_part_corta, l_19a)
+
+df_part_corta %>% 
+  filter(l_19a == 1|l_19a == 2|l_19a == 3|l_19a == 4) %>% 
+  ggplot(aes(x = as.factor(l_19a))) +
+  geom_bar(color = '#000000' , alpha = 0.5)+
+  labs(title = "Figura 2. Gráfico de barras 'Evaluación Servicios Comuna 1'(l_19a)",
+       subtitle = "Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Seguridad Ciudadana (Guardia Municipal)'",
+       x= "", y = "Frecuencia") +
+  scale_x_discrete(breaks= c("1", "2", "3", "4"),
+                   labels = c("Muy Buena", "", "", "Muy Mala"))+
+  theme_minimal()
+```
+```{r}
+frq(df_part_corta, l_19b)
+
+df_part_corta %>% 
+  filter(l_19b == 1|l_19b == 2|l_19b == 3|l_19b == 4) %>% 
+  ggplot(aes(x = as.factor(l_19b))) +
+  geom_bar(color = '#000000' , alpha = 0.5)+
+  labs(title = "Figura 3. Gráfico de barras 'Evaluación Servicios Comuna 1'(l_19b)",
+       subtitle = "Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Recolección de basura'",
+       x= "", y = "Frecuencia") +
+  scale_x_discrete(breaks= c("1", "2", "3", "4"),
+                   labels = c("Muy Buena", "", "", "Muy Mala"))+
+  theme_minimal()
+```
+
+```{r}
+frq(df_part_corta, l_19c)
+
+df_part_corta %>% 
+  filter(l_19c == 1|l_19c == 2|l_19c == 3|l_19c == 4) %>% 
+  ggplot(aes(x = as.factor(l_19c))) +
+  geom_bar(color = '#000000' , alpha = 0.5)+
+  labs(title = "Figura 4. Gráfico de barras 'Evaluación Servicios Comuna 1'(l_19c)",
+       subtitle = "Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Mantenimiento de calles y vias'",
+       x= "", y = "Frecuencia") +
+  scale_x_discrete(breaks= c("1", "2", "3", "4"),
+                   labels = c("Muy Buena", "", "", "Muy Mala"))+
+  theme_minimal()
+```
+
+```{r}
+frq(df_part_corta, l_19d)
+
+df_part_corta %>% 
+  filter(l_19d == 1|l_19d == 2|l_19d == 3|l_19d == 4) %>% 
+  ggplot(aes(x = as.factor(l_19d))) +
+  geom_bar(color = '#000000' , alpha = 0.5)+
+  labs(title = "Figura 5. Gráfico de barras 'Evaluación Servicios Comuna 1'(l_19d)",
+       subtitle = "Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Protección civil'",
+       x= "", y = "Frecuencia") +
+  scale_x_discrete(breaks= c("1", "2", "3", "4"),
+                   labels = c("Muy Buena", "", "", "Muy Mala"))+
+  theme_minimal()
+```
+
+Vemos que en la mayoría de los casos la gente tiende a tener una buena o decente evaluación de los servicios comunales, pero hay una mayor varianza en las evaluaciones de Protección civil, Seguridad Ciudadana y Mantenimiento de calles. En la cuarta entrega se hará un análisis de cuál de las cuatro variables tiene un mayor poder explicativo que luego se transformará en una regresión para analizar su impacto. 
+
+La variable de corrupción todavía no se ha podido conseguir una base de datos suficiente, por lo que su análisis se incluirá en un futuro, luego de los análisis preliminares. 
