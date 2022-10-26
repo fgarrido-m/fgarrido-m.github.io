@@ -1527,146 +1527,149 @@ href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/G
 class="uri">https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/G9ENDE</a>).
 Esta encuesta se realiza en comunas de cuidades medianas y pequeñas de
 tres países, pero dividen las bases de datos según países, siendo la que
-se utiliza la chilena. La EDTB pregunta una serie de información a
-vecinos de estas comunas sobre el bienestar y características
-sociodemográficas, pero para esto realizamos una serie de filtros para
-dejar las preguntas más relevantes. Se dejan algunas de las preguntas
-básicas sobre género, nivel educacional, nombre de la comuna y otros.
-Además se deja la pregunta l_15h que consulta sobre la participación del
-vecino en organzaciones vecinales, principalmente juntas de vecinos.
-Además hay preguntas sobre los outputs políticos en la entrega de
-servicios como la seguridad, recolección de basura, mantenimiento de
-calles y protección civil (1_19a, b, c y d). Esto nos deja con las
-variables que más se requieren para esta investigación. Otras variables
-que podrían ser interesantes en el futuro son si participan en las
-elecciones municipales (l_1 y l_5), interés en asuntos políticos (l_6,
-l_8), medición de cohesión vecinal (l_12,l_16a), acercamiento a
-autoridades (l_16b) y satisfacción con la comunidad y sus autoridades
-(m_3d, e y f)</p>
+se utiliza la chilena. Si bien esto tiene algunas debilidades, debido a
+que no es explorable hacia ciudades más grandes, si da la posibilidad de
+explorar las situaciones de comunas más pequeñas. Estos históricamente
+han sido desfavorecidas, para dar espacio al estudio de comunas más
+grandes, en particular las que corresponden a la ciudad de Santiago.</p>
+<p>La EDTB pregunta una serie de información a vecinos de estas comunas
+sobre el bienestar y características sociodemográficas, pero para esto
+realizamos una serie de filtros para dejar las preguntas más relevantes.
+Se dejan algunas de las preguntas básicas sobre género, nivel
+educacional, nombre de la comuna y otros. Además se deja la pregunta
+l_15h que consulta sobre la participación del vecino en organzaciones
+vecinales, principalmente juntas de vecinos. Además hay preguntas sobre
+los outputs políticos en la entrega de servicios como la seguridad,
+recolección de basura, mantenimiento de calles y protección civil
+(1_19a, b, c y d). Esto nos deja con las variables que más se requieren
+para esta investigación. Otras variables que podrían ser interesantes en
+el futuro son si participan en las elecciones municipales (l_1 y l_5),
+interés en asuntos políticos (l_6, l_8), medición de cohesión vecinal
+(l_12,l_16a, l_20g), acercamiento a autoridades (l_16b) y satisfacción
+con la comunidad y sus autoridades (m_3d, e y f). Primero se hará una
+modificación de las variables necesarias.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>  [1] &quot;folio_hogar&quot;      &quot;region&quot;           &quot;comuna&quot;          
-  [4] &quot;localidad&quot;        &quot;distrito&quot;         &quot;zona&quot;            
-  [7] &quot;manzana&quot;          &quot;tipo_localidad&quot;   &quot;muestra&quot;         
- [10] &quot;edad_informada&quot;   &quot;genero&quot;           &quot;laboralmente&quot;    
- [13] &quot;fecha_encuesta&quot;   &quot;hora_inicio&quot;      &quot;sup_presencial&quot;  
- [16] &quot;sup_telefonica&quot;   &quot;h_1&quot;              &quot;i_1&quot;             
- [19] &quot;j_1_a&quot;            &quot;j_1_aotro&quot;        &quot;j_1_b_c1&quot;        
- [22] &quot;j_1_b_c1otro&quot;     &quot;j_1_b_c2&quot;         &quot;j_1_b_c2otro&quot;    
- [25] &quot;j_2_c1&quot;           &quot;j_2_c2&quot;           &quot;j_3_c1&quot;          
- [28] &quot;j_3_c2&quot;           &quot;j_4_c1&quot;           &quot;j_4_c2&quot;          
- [31] &quot;j_5_c1&quot;           &quot;j_5_c2&quot;           &quot;j_6_c1&quot;          
- [34] &quot;j_6_c1otro&quot;       &quot;j_6_c2&quot;           &quot;j_6_c2otro&quot;      
- [37] &quot;j_7_c1&quot;           &quot;j_7_c2&quot;           &quot;j_8_a&quot;           
- [40] &quot;j_8_b&quot;            &quot;j_8_c&quot;            &quot;j_8_d&quot;           
- [43] &quot;j_9_a&quot;            &quot;j_9_b&quot;            &quot;j_9_c&quot;           
- [46] &quot;j_9_d&quot;            &quot;j_9_e&quot;            &quot;j_10_a&quot;          
- [49] &quot;j_10_b&quot;           &quot;j_10_c&quot;           &quot;j_10_d&quot;          
- [52] &quot;j_10_e&quot;           &quot;j_10_f&quot;           &quot;j_10_g&quot;          
- [55] &quot;k_1a&quot;             &quot;k_1b&quot;             &quot;k_1c&quot;            
- [58] &quot;k_2&quot;              &quot;k_3&quot;              &quot;k_4a&quot;            
- [61] &quot;k_4b&quot;             &quot;l_1&quot;              &quot;l_2&quot;             
- [64] &quot;l_3&quot;              &quot;l_4&quot;              &quot;l_5&quot;             
- [67] &quot;l_6&quot;              &quot;l_7&quot;              &quot;l_8&quot;             
- [70] &quot;l_9_1ero&quot;         &quot;l_9_2do&quot;          &quot;l_9_3ero&quot;        
- [73] &quot;l_10&quot;             &quot;l_10otro&quot;         &quot;l_11a&quot;           
- [76] &quot;l_11b&quot;            &quot;l_11c&quot;            &quot;l_11d&quot;           
- [79] &quot;l_11e&quot;            &quot;l_11f&quot;            &quot;l_11fotro&quot;       
- [82] &quot;l_11g&quot;            &quot;l_12&quot;             &quot;l_13&quot;            
- [85] &quot;l_14&quot;             &quot;l_15a&quot;            &quot;l_15b&quot;           
- [88] &quot;l_15c&quot;            &quot;l_15d&quot;            &quot;l_15e&quot;           
- [91] &quot;l_15f&quot;            &quot;l_15g&quot;            &quot;l_15h&quot;           
- [94] &quot;l_15i&quot;            &quot;l_15j&quot;            &quot;l_15k&quot;           
- [97] &quot;l_15l&quot;            &quot;l_15lotro&quot;        &quot;l_16a&quot;           
-[100] &quot;l_17a_1era&quot;       &quot;l_17a_2da&quot;        &quot;l_18a&quot;           
-[103] &quot;l_16b&quot;            &quot;l_17b_1era&quot;       &quot;l_17b_2da&quot;       
-[106] &quot;l_18b&quot;            &quot;l_16c&quot;            &quot;l_17c_1era&quot;      
-[109] &quot;l_17c_2da&quot;        &quot;l_18c&quot;            &quot;l_16d&quot;           
-[112] &quot;l_17d_1era&quot;       &quot;l_17d_2da&quot;        &quot;l_18d&quot;           
-[115] &quot;l_16e&quot;            &quot;l_17e_1era&quot;       &quot;l_17e_2da&quot;       
-[118] &quot;l_18e&quot;            &quot;l_19a&quot;            &quot;l_19b&quot;           
-[121] &quot;l_19c&quot;            &quot;l_19d&quot;            &quot;l_19e&quot;           
-[124] &quot;l_20a&quot;            &quot;l_20b&quot;            &quot;l_20c&quot;           
-[127] &quot;l_20d&quot;            &quot;l_20e&quot;            &quot;l_20f&quot;           
-[130] &quot;l_20g&quot;            &quot;l_20h&quot;            &quot;l_20i&quot;           
-[133] &quot;l_21&quot;             &quot;l_22&quot;             &quot;l_23&quot;            
-[136] &quot;l_24&quot;             &quot;l_25a&quot;            &quot;l_25b&quot;           
-[139] &quot;l_25c&quot;            &quot;l_25d&quot;            &quot;l_25e&quot;           
-[142] &quot;l_25f&quot;            &quot;l_25g&quot;            &quot;m_1&quot;             
-[145] &quot;m_2&quot;              &quot;m_2otro&quot;          &quot;m_3a&quot;            
-[148] &quot;m_3b&quot;             &quot;m_3c&quot;             &quot;m_3d&quot;            
-[151] &quot;m_3e&quot;             &quot;m_3f&quot;             &quot;hora_fin&quot;        
-[154] &quot;id_digitador&quot;     &quot;id_encuestador&quot;   &quot;pm&quot;              
-[157] &quot;fex_hog&quot;          &quot;expm&quot;             &quot;trayectoria_ci_9&quot;
-[160] &quot;trayectoria_ci&quot;   &quot;id_territorio&quot;    &quot;urbanity&quot;        </code></pre>
+<pre><code>1 variables were not found in the dataset: L_6</code></pre>
 </div>
 <p>El primer gráfico a analizar es el de la participación en
 organizaciones vecinales. La pregunta está dispuesta en una respuesta
 dicotómica y vemos que la gran mayoría de personas no participan en
 organizaciones vecinales.</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df_part_mod</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>j_vecinos</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>geom_bar</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>'#000000'</span> , alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figura 1. Gráfico de barras 'Participación en organización vecinal'(j_vecinos)"</span>,</span>
+<span>       subtitle <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Pregunta: '¿En el último año usted ha participado de manera activa en alguno de los siguientes grupos u organizaciones? Organización vecinal (asociación de vivienda o junta de vecinos)'"</span>, <span class='fl'>70</span><span class='op'>)</span>,</span>
+<span>       x<span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Frecuencia"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>scale_x_discrete</span><span class='op'>(</span>breaks<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"1"</span>, <span class='st'>"0"</span>, <span class='cn'>NA</span><span class='op'>)</span>,</span>
+<span>                   labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Si"</span>, <span class='st'>"No"</span>, <span class='st'>"No sabe/No responde"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="entrega-3-grficos-y-tablas_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
 </div>
 <p>Luego vemos las variables que miden la evaluación de servicios
 comunales, lo cual puede ser entendido como una evaluación de los
 outputs políticos definidos en la segunda entrega.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>¿cómo evaluaría usted la calidad de los siguientes servicios que existen en e (l_19a) &lt;numeric&gt; 
-# total N=4007 valid N=4007 mean=3.50 sd=2.24
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>frq</span><span class='op'>(</span><span class='va'>df_part_mod</span>, <span class='va'>guardia_muni</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>guardia_muni &lt;categorical&gt; 
+# total N=4007 valid N=3136 mean=0.63 sd=0.48
 
-Value |     Label |    N | Raw % | Valid % | Cum. %
----------------------------------------------------
-    1 | muy buena |  167 |  4.17 |    4.17 |   4.17
-    2 |     buena | 1813 | 45.25 |   45.25 |  49.41
-    3 |      mala |  945 | 23.58 |   23.58 |  73.00
-    4 |  muy mala |  211 |  5.27 |    5.27 |  78.26
-    7 | no aplica |  649 | 16.20 |   16.20 |  94.46
-    9 |     ns-nr |  222 |  5.54 |    5.54 | 100.00
- &lt;NA&gt; |      &lt;NA&gt; |    0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+Value |    N | Raw % | Valid % | Cum. %
+---------------------------------------
+    0 | 1156 | 28.85 |   36.86 |  36.86
+    1 | 1980 | 49.41 |   63.14 | 100.00
+ &lt;NA&gt; |  871 | 21.74 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df_part_mod</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>guardia_muni</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>geom_bar</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>'#000000'</span> , alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figura 2. Gráfico de barras 'Evaluación Servicios Comuna 1'(guardia_muni)"</span>,</span>
+<span>       subtitle <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Seguridad Ciudadana (Guardia Municipal)'"</span><span class='op'>)</span>,</span>
+<span>       x<span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Frecuencia"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>scale_x_discrete</span><span class='op'>(</span>breaks<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"0"</span>, <span class='st'>"1"</span>, <span class='cn'>NA</span><span class='op'>)</span>,</span>
+<span>                   labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mala/Muy Mala"</span>, <span class='st'>"Buena/Muy Buena"</span>, <span class='st'>"No responde/No aplica"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="entrega-3-grficos-y-tablas_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>¿cómo evaluaría usted la calidad de los siguientes servicios que existen en e (l_19b) &lt;numeric&gt; 
-# total N=4007 valid N=4007 mean=2.23 sd=1.05
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>frq</span><span class='op'>(</span><span class='va'>df_part_mod</span>, <span class='va'>rec_basura</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>rec_basura &lt;categorical&gt; 
+# total N=4007 valid N=3906 mean=0.83 sd=0.38
 
-Value |     Label |    N | Raw % | Valid % | Cum. %
----------------------------------------------------
-    1 | muy buena |  434 | 10.83 |   10.83 |  10.83
-    2 |     buena | 2799 | 69.85 |   69.85 |  80.68
-    3 |      mala |  528 | 13.18 |   13.18 |  93.86
-    4 |  muy mala |  145 |  3.62 |    3.62 |  97.48
-    7 | no aplica |   78 |  1.95 |    1.95 |  99.43
-    9 |     ns-nr |   23 |  0.57 |    0.57 | 100.00
- &lt;NA&gt; |      &lt;NA&gt; |    0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+Value |    N | Raw % | Valid % | Cum. %
+---------------------------------------
+    0 |  673 | 16.80 |   17.23 |  17.23
+    1 | 3233 | 80.68 |   82.77 | 100.00
+ &lt;NA&gt; |  101 |  2.52 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df_part_mod</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>rec_basura</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>geom_bar</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>'#000000'</span> , alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figura 3. Gráfico de barras 'Evaluación Servicios Comuna 1'(rec_basura)"</span>,</span>
+<span>       subtitle <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Recolección de basura'"</span><span class='op'>)</span>,</span>
+<span>       x<span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Frecuencia"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>scale_x_discrete</span><span class='op'>(</span>breaks<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"0"</span>, <span class='st'>"1"</span>, <span class='cn'>NA</span><span class='op'>)</span>,</span>
+<span>                   labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mala/Muy Mala"</span>,<span class='st'>"Buena/Muy Buena"</span>, <span class='st'>"No responde/No aplica"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="entrega-3-grficos-y-tablas_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>¿cómo evaluaría usted la calidad de los siguientes servicios que existen en e (l_19c) &lt;numeric&gt; 
-# total N=4007 valid N=4007 mean=2.60 sd=1.24
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>frq</span><span class='op'>(</span><span class='va'>df_part_mod</span>, <span class='va'>mant_calles</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>mant_calles &lt;categorical&gt; 
+# total N=4007 valid N=3864 mean=0.62 sd=0.49
 
-Value |     Label |    N | Raw % | Valid % | Cum. %
----------------------------------------------------
-    1 | muy buena |  241 |  6.01 |    6.01 |   6.01
-    2 |     buena | 2137 | 53.33 |   53.33 |  59.35
-    3 |      mala | 1134 | 28.30 |   28.30 |  87.65
-    4 |  muy mala |  352 |  8.78 |    8.78 |  96.43
-    7 | no aplica |   90 |  2.25 |    2.25 |  98.68
-    9 |     ns-nr |   53 |  1.32 |    1.32 | 100.00
- &lt;NA&gt; |      &lt;NA&gt; |    0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+Value |    N | Raw % | Valid % | Cum. %
+---------------------------------------
+    0 | 1486 | 37.09 |   38.46 |  38.46
+    1 | 2378 | 59.35 |   61.54 | 100.00
+ &lt;NA&gt; |  143 |  3.57 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df_part_mod</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>mant_calles</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>geom_bar</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>'#000000'</span> , alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figura 4. Gráfico de barras 'Evaluación Servicios Comuna 1'(mant_calles)"</span>,</span>
+<span>       subtitle <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Mantenimiento de calles y vias'"</span><span class='op'>)</span>,</span>
+<span>       x<span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Frecuencia"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>scale_x_discrete</span><span class='op'>(</span>breaks<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"0"</span>, <span class='st'>"1"</span>, <span class='cn'>NA</span><span class='op'>)</span>,</span>
+<span>                   labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mala/Muy Mala"</span>, <span class='st'>"Buena/Muy Buena"</span>, <span class='st'>"No responde/No aplica"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="entrega-3-grficos-y-tablas_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>¿cómo evaluaría usted la calidad de los siguientes servicios que existen en e (l_19d) &lt;numeric&gt; 
-# total N=4007 valid N=4007 mean=3.89 sd=2.62
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>frq</span><span class='op'>(</span><span class='va'>df_part_mod</span>, <span class='va'>prot_civil</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>prot_civil &lt;categorical&gt; 
+# total N=4007 valid N=2975 mean=0.62 sd=0.49
 
-Value |     Label |    N | Raw % | Valid % | Cum. %
----------------------------------------------------
-    1 | muy buena |  147 |  3.67 |    3.67 |   3.67
-    2 |     buena | 1697 | 42.35 |   42.35 |  46.02
-    3 |      mala |  888 | 22.16 |   22.16 |  68.18
-    4 |  muy mala |  243 |  6.06 |    6.06 |  74.25
-    7 | no aplica |  447 | 11.16 |   11.16 |  85.40
-    9 |     ns-nr |  585 | 14.60 |   14.60 | 100.00
- &lt;NA&gt; |      &lt;NA&gt; |    0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+Value |    N | Raw % | Valid % | Cum. %
+---------------------------------------
+    0 | 1131 | 28.23 |   38.02 |  38.02
+    1 | 1844 | 46.02 |   61.98 | 100.00
+ &lt;NA&gt; | 1032 | 25.75 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df_part_mod</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>prot_civil</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>geom_bar</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>'#000000'</span> , alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figura 5. Gráfico de barras 'Evaluación Servicios Comuna 1'(prot_civil)"</span>,</span>
+<span>       subtitle <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Protección civil, por ejemplo, frente a terremotos, inundaciones u otros desastres naturales'"</span><span class='op'>)</span>,</span>
+<span>       x<span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Frecuencia"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>scale_x_discrete</span><span class='op'>(</span>breaks<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"0"</span>, <span class='st'>"1"</span>, <span class='cn'>NA</span><span class='op'>)</span>,</span>
+<span>                   labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mala/Muy Mala"</span>, <span class='st'>"Buena/Muy Buena"</span>, <span class='st'>"No responde/No aploca"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="entrega-3-grficos-y-tablas_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
 </div>
 <p>Vemos que en la mayoría de los casos la gente tiende a tener una

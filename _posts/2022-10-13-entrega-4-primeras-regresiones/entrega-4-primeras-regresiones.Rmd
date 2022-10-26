@@ -1,0 +1,90 @@
+---
+title: "Entrega 4: primeras regresiones"
+description: |
+  Cuarta entrega para el trabajo de ICP5006
+author:
+  - name: Felipe Garrido
+    url: https://fgarrido-m.github.io/
+date: 2022-09-25
+categories: 
+ - Trabajo
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+Para continuar nuestra exploración de la base de datos de la EDTB, se realizaran unas primeras regresiones para analizar de manera preeliminar las relaciones entre las variables más esenciales. El tipo de regresión a utilizar es una de tipo logit, debido a que la variable dependiente es una variable de tipo categórica dummy, es decir, está o no está. En este caso nuestra variable tiene dos posibilidades, participa o no en una junta de vecinos. Las columnas utilizamos para describir nuestra variable de outputs políticos son preguntas del 1 al 4 en términos de percepción de la entrega de estos servicios de parte de la población. Estas variables fueron recodificadas para que fuesen binarias, es decir, que tomen un valor de un 0 o un 1, "1" significa que tienen una evaluación buena o muy buena de los servicios. Inicialmente se correran cinco regresiones, una con cada una de las variables y una final con las cuatro juntas. Ningún otra variable quedará en este análisis inicial.
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(sjmisc)
+library(lubridate)
+library(labelled)
+library(corrplot)
+library(margins)
+library(prediction)
+library(texreg)
+library(jtools)
+library(pscl)
+library(broom)
+library(plotROC)
+```
+
+```{r}
+df_part_mod <- readRDS("especiales_1_acotadas.rds")
+
+skimr::skim(df_part_mod, j_vecinos, guardia_muni, rec_basura, mant_calles, prot_civil)
+
+```
+
+```{r echo=TRUE}
+modelo_1 <- glm(j_vecinos ~ guardia_muni, 
+                data = df_part_mod,
+                family = binomial("logit"))
+
+modelo_2 <- glm(j_vecinos ~ rec_basura, 
+                data = df_part_mod,
+                family = binomial("logit"))
+
+modelo_3 <- glm(j_vecinos ~ mant_calles, 
+                data = df_part_mod,
+                family = binomial("logit"))
+                
+modelo_4 <- glm(j_vecinos ~ prot_civil, 
+                data = df_part_mod,
+                family = binomial("logit"))
+
+modelo_5 <- glm(j_vecinos ~ guardia_muni + rec_basura + mant_calles + prot_civil, 
+                data = df_part_mod,
+                family = binomial("logit"))
+
+modelos <- list(modelo_1, modelo_2, modelo_3, modelo_4, modelo_5)
+```
+
+```{r}
+screenreg(modelos)
+```
+
+Cómo podemos apreciar, todas las variables tienen significancia estadística, exceptuando la variable que mide la percpeción del servicio de Recolección de Basura. Cuando medimos las cinco variables juntas vemos que la única que tiene significancia estadística es la percepción del servicio de Protección Civil en casos de emergencia, esto se puede deber a que las cuatro variables estén altamente correlacionadas. Esto nos indica que a futuro lo mejor que se puede hacer es un índice de las cuatro variables. En términos de direccionalidad es contrario a lo que inicialmente se esperaría dada las observaciones previo al análisis de datos, pues vemos que cuando sube la evaluación de los datos, baja la probabilidad de que el individuo participe en las juntas de vecinos. Esto mismo vemos cuando analizamos los Odds de las regresiones:
+
+```{r}
+exp(coef(modelo_1))
+
+exp(coef(modelo_2))
+
+exp(coef(modelo_3))
+
+exp(coef(modelo_4))
+```
+
+Por ejemplo, cuando una persona tiene una evaluación positiva de la guardia municipal, la probabilidad de que participe en una junta de vecinos es de 0.8, lo que en términos de probabilidad, significa que disminuye. Este patrón se ve en todas las variables, aunque entre las que son significativas (todas menos Recolección de Basura), la que tiene un Odd más grande es la evaluación de la Guardia Municipal. En términos de comportamiento esto nos indica que las personas tienden a participar más en las juntas de vecinos cuando las evaluaciones de los servicios públicos de la comuna son negativos. Sin embargo, todavía no hemos hecho el análisis cruzando los datos con la perpeción de corrupción. 
+
+Esto nos lleva a plantear nuestro modelo que luego va a ser utilizado en el resto del trabajo:
+
+$$ParticipaciónJuntasdeVecinos = \alpha + \ Evaluación ServiciosX_1+ \\ Participación Elecciónes X_2 + Cohesión VecinalX_3 \\ Interés en Asuntos Políticos X_4 + Percepción de la Corrupción X_5+  \mu  $$
+
+Las variables de Evaluación de Servicios y  Cohesión Vecinal serán índices. Evaluación de Servicios implican las variables ya evaluadas, Cohesión Vecinal incluye preguntas respecto a la cantidad de números de teléfonos de vecinos que tiene el individuo (n_telefono), si le pide ayuda a vecinos en casos de necesidad (coop_vecinos) y nivel de confianza en los vecinos (confianza). Interés en Asuntos Políticos se medirá con la variable 'asuntos', que pregunta directamente esto y Participación Electoral se pregunta si se voto en las últimas elecciones en la variable 'voto'.
+
+En términos de hipótesis, se espera que cuando haya una buena Evaluación de Servicios, haya poca probabilidad de participar en juntas de vecinos, cuando hay más Cohesión Vecinal, es más probable que participe en juntas de vecinos, cuando hay Participación Electoral, haya más probabilidad de participar en juntas de vecinos y cuando haya más Interés en Asuntos Políticos haya más probabilidad de participar en juntas de vecinos.
+
+Dada las experiencias pasadas, que llevaron a estudiar el tema presente, se espera que la interacción con Corrupción será más complicada. Se espera que cuando haya una alta percepción de la corrupción se de vuelta la relación de la Evaluación de Servicios, es decir, cuando haya una Percepción de la Corrupción más alta, el tener una alta Evaluación de Servicios imlpique que sea más probable que participe el individuo en la junta de vecinos. La lógica tras esta hipótesis es que cuando hay una alta corrupción y una mala evaluación de los servicios en la mente del individuo no valga la pena el participar en juntas de vecinos, pues no se logrará nada haciéndolo. 
