@@ -1,0 +1,2483 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Entrega Final: Condicionantes de la Participación Ciudadana: Evaluación de Servicios Municipales y Cohesión Vecinal en las Juntas de Vecinos</title>
+
+  <meta property="description" itemprop="description" content="Entrega Final para el trabajo de ICP5006"/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-12-05"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-12-05"/>
+  <meta name="article:author" content="Felipe Garrido"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Entrega Final: Condicionantes de la Participación Ciudadana: Evaluación de Servicios Municipales y Cohesión Vecinal en las Juntas de Vecinos"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Entrega Final para el trabajo de ICP5006"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Entrega Final: Condicionantes de la Participación Ciudadana: Evaluación de Servicios Municipales y Cohesión Vecinal en las Juntas de Vecinos"/>
+  <meta property="twitter:description" content="Entrega Final para el trabajo de ICP5006"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","categories","output"]}},"value":[{"type":"character","attributes":{},"value":["Entrega Final: Condicionantes de la Participación Ciudadana: Evaluación de Servicios Municipales y Cohesión Vecinal en las Juntas de Vecinos"]},{"type":"character","attributes":{},"value":["Entrega Final para el trabajo de ICP5006\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Felipe Garrido"]},{"type":"character","attributes":{},"value":["https://fgarrido-m.github.io/"]}]}]},{"type":"character","attributes":{},"value":["2022-12-05"]},{"type":"character","attributes":{},"value":["Trabajo"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["e1_chile_especiales_1.dta","entrega-final_files/anchor-4.2.2/anchor.min.js","entrega-final_files/bowser-1.9.3/bowser.min.js","entrega-final_files/distill-2.2.21/template.v2.js","entrega-final_files/figure-html5/unnamed-chunk-12-1.png","entrega-final_files/figure-html5/unnamed-chunk-14-1.png","entrega-final_files/figure-html5/unnamed-chunk-15-1.png","entrega-final_files/figure-html5/unnamed-chunk-15-2.png","entrega-final_files/figure-html5/unnamed-chunk-15-3.png","entrega-final_files/figure-html5/unnamed-chunk-15-4.png","entrega-final_files/figure-html5/unnamed-chunk-18-1.png","entrega-final_files/figure-html5/unnamed-chunk-20-1.png","entrega-final_files/figure-html5/unnamed-chunk-21-1.png","entrega-final_files/figure-html5/unnamed-chunk-21-2.png","entrega-final_files/figure-html5/unnamed-chunk-21-3.png","entrega-final_files/figure-html5/unnamed-chunk-21-4.png","entrega-final_files/figure-html5/unnamed-chunk-21-5.png","entrega-final_files/figure-html5/unnamed-chunk-24-1.png","entrega-final_files/figure-html5/unnamed-chunk-25-1.png","entrega-final_files/figure-html5/unnamed-chunk-26-1.png","entrega-final_files/figure-html5/unnamed-chunk-27-1.png","entrega-final_files/figure-html5/unnamed-chunk-28-1.png","entrega-final_files/figure-html5/unnamed-chunk-28-2.png","entrega-final_files/figure-html5/unnamed-chunk-28-3.png","entrega-final_files/figure-html5/unnamed-chunk-28-4.png","entrega-final_files/figure-html5/unnamed-chunk-28-5.png","entrega-final_files/figure-html5/unnamed-chunk-29-1.png","entrega-final_files/figure-html5/unnamed-chunk-3-1.png","entrega-final_files/figure-html5/unnamed-chunk-30-1.png","entrega-final_files/figure-html5/unnamed-chunk-31-1.png","entrega-final_files/figure-html5/unnamed-chunk-31-2.png","entrega-final_files/figure-html5/unnamed-chunk-31-3.png","entrega-final_files/figure-html5/unnamed-chunk-31-4.png","entrega-final_files/figure-html5/unnamed-chunk-31-5.png","entrega-final_files/figure-html5/unnamed-chunk-32-1.png","entrega-final_files/figure-html5/unnamed-chunk-32-2.png","entrega-final_files/figure-html5/unnamed-chunk-32-3.png","entrega-final_files/figure-html5/unnamed-chunk-32-4.png","entrega-final_files/figure-html5/unnamed-chunk-32-5.png","entrega-final_files/figure-html5/unnamed-chunk-33-1.png","entrega-final_files/figure-html5/unnamed-chunk-34-1.png","entrega-final_files/figure-html5/unnamed-chunk-4-1.png","entrega-final_files/figure-html5/unnamed-chunk-5-1.png","entrega-final_files/figure-html5/unnamed-chunk-6-1.png","entrega-final_files/figure-html5/unnamed-chunk-7-1.png","entrega-final_files/header-attrs-2.15/header-attrs.js","entrega-final_files/jquery-3.6.0/jquery-3.6.0.js","entrega-final_files/jquery-3.6.0/jquery-3.6.0.min.js","entrega-final_files/jquery-3.6.0/jquery-3.6.0.min.map","entrega-final_files/popper-2.6.0/popper.min.js","entrega-final_files/tippy-6.2.7/tippy-bundle.umd.min.js","entrega-final_files/tippy-6.2.7/tippy-light-border.css","entrega-final_files/tippy-6.2.7/tippy.css","entrega-final_files/tippy-6.2.7/tippy.umd.min.js","entrega-final_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="entrega-final_files/header-attrs-2.15/header-attrs.js"></script>
+  <script src="entrega-final_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="entrega-final_files/popper-2.6.0/popper.min.js"></script>
+  <link href="entrega-final_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="entrega-final_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="entrega-final_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="entrega-final_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="entrega-final_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="entrega-final_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="entrega-final_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Entrega Final: Condicionantes de la Participación Ciudadana: Evaluación de Servicios Municipales y Cohesión Vecinal en las Juntas de Vecinos","description":"Entrega Final para el trabajo de ICP5006","authors":[{"author":"Felipe Garrido","authorURL":"https://fgarrido-m.github.io/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-12-05T00:00:00.000-03:00","citationText":"Garrido, 2022"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Entrega Final: Condicionantes de la Participación Ciudadana: Evaluación de Servicios Municipales y Cohesión Vecinal en las Juntas de Vecinos</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt-tag">Trabajo</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Entrega Final para el trabajo de ICP5006</p></p>
+</div>
+
+<div class="d-byline">
+  Felipe Garrido <a href="https://fgarrido-m.github.io/"
+class="uri">https://fgarrido-m.github.io/</a> 
+  
+<br/>2022-12-05
+</div>
+
+<div class="d-article">
+<h1 id="introducción-y-marco-teórico">Introducción y Marco Teórico</h1>
+<p>Luego del Estallido Social en 2019, hay un renovado interés en la
+participación de la ciudadanía en la política, pues se buscan soluciones
+a las problemáticas que generaron las masivas protestas de ese año. La
+forma más básica de participación es la votación (Lijphart, 1997), sin
+embargo es notorio que el porcentaje de voto en Chile fue disminuyendo
+progresivamente y las muestras de participación ciudadana más básicas a
+no son las más utilizadas por la población (Leibe, Palanza y Sánchez,
+2021). De esta manera, es importante mirar hacia otras formas de
+participación ciudadana, sea la protesta o el involucramiento en
+organizaciones de la sociedad civil, que permitan que las personas
+expresen sus necesidades y se sientan satisfechas con su sistema
+político.</p>
+<p>El enfoque de este trabajo será en la forma de Participación
+Ciudadana más organizada en estas organizaciones de la sociedad civil.
+Este interés en particular surge de investigaciones previas sobre la
+participación ciudadana en la formación de planes reguladores de dos
+comunas, que muestran dos razones interesantes para la participación
+ciudadana en primer lugar. Por una parte cuando las personas consideran
+que la institución a nivel comunal es de fiar se ven motivadas a
+participar, debido que consideran que sus intervenciones si van a ser
+escuchadas. Por otra parte, vemos las teorías que son más apoyadas por
+la literatura (Tilly, 2000 y 2010; White, 2012; Cantillán y Herrera,
+2020), que nos indican que mientras los vecinos tienen mayores
+similitudes pueden funcionar de mejor manera en este trabajo coordinado.
+El planteamiento es que la similitud entre individuos facilita la
+cohesión vecinal y elimina los roces que permiten una mejor comunicación
+y por lo tanto, favorecen la participación. En este trabajo más allá de
+ver la similitud, se busca analizar la cohesión vecinal como el
+mecanismo causal bajo el cual funciona las teorías previamente
+mencionadas. El interés del trabajo es finalmente analizar cuál de estas
+dos condicionantes son más relevantes para la efectiva participación de
+personas en el ámbito subnacional.</p>
+<p>Para esto definimos entonces tres variables de interés para este
+trabajo:</p>
+<h3 id="a.-participación-ciudadana">A. Participación Ciudadana</h3>
+<h4 id="i.-definición">i. Definición</h4>
+<p>De una manera poco elegante la participación ciudadana implica
+normalmente cualquier forma de participación que vaya más allá del mero
+hecho de votar en las elecciones rutinarias por representantes
+políticos. Muchas veces es visto como una forma de profundizar la
+democracia dentro de les ciudadanes, dando rienda suelta a variadas
+versiones de democracia entre las que se encuentran deliberativa,
+directa, agonística, etc. (Smith, 2009). En Chile la experiencia de la
+participación ciudadana es mediada por la existencia de la dictadura y
+su definición de política que lo aleja de la población (De la Fuente,
+2013). La recuperación democrática en Chile implica la inclusión de la
+ciudadanía y un esfuerzo explícito por parte de los gobiernos de Lagos y
+Bachelet de volver a llevar la democracia a la ciudadanía (De la Fuente,
+2013). Esto refleja las definiciones de democracia participativa que
+plantea Pateman (1970) cuando menciona la importancia de llevar
+instancias democráticas a espacios cercanos para el común de las
+personas cómo el lugar de empleo y los barrios. Debido a la dificultad
+chilena de sindicalización, una atadura de la época dictatorial, se toma
+la democracia participativa en esta otra dimensión, siendo importante lo
+territorial, que se aplica fácilmente a lo que se busca medir en este
+trabajo: el espacio subnacional.</p>
+<h4 id="ii.-operacionalización">ii. Operacionalización</h4>
+<p>Tomando en cuenta la breve definición hecha a sobre la participación
+ciudadana en Chile, debemos analizar como es que vamos a medirla. En el
+caso de este trabajo buscaremos la participación ciudadana en el barrio,
+en el territorio, finalmente en la comuna. Dada la experiencia previa en
+otros trabajos, se ha visto como periódicamente se ha desarticulado la
+forma básica de participación ciudadana en Chile: la junta de vecinos.
+La junta de vecinos tiene una larga data de existencia en el país,
+apareciendo en 1887, con la Ley de Organización y Atribuciones
+Municipales (Cáceres et al, 1983). Dada la historia chilena y la
+importancia de la junta de vecinos como lugar de participación
+democrática primaria, en este trabajo se operacionalizará la
+Participación Ciudadana como el nivel de participación en juntas de
+vecinos de cada comuna.</p>
+<h3 id="b.-confianza-en-las-instituciones">B. Confianza en las
+instituciones</h3>
+<h4 id="i.-definición-1">i. Definición</h4>
+<p>La fuente teórica de esta variable se encuentra en la idea de la
+cultura política de Almond y Verba (1963). Se define la cultura política
+como un conjunto de orientaciones evaluativas, afectivas y cognitivas
+hacia una serie de objetos políticos. Sin embargo hay otros estudios
+neurocientíficos posteriores que hacen dudar de las diferencias reales
+entre lo cognitivo y lo afectivo y su efecto en lo evaluativo (Marcus,
+2013; Eagly y Chaiken, 1998). A pesar de lo anterior, el punto de Almond
+y Verba (1963) se mantiene, particularmente con respecto a los objetos
+políticos hacia los que se manifiestan estas orientaciones. Para los
+autores son cuatro: 1. La institucionalidad en sí, 2. El rol que tiene
+el individuo dentro de la política, 3. La forma en que se desarrolla la
+política y 4. Los outcomes de estos procesos políticos. Además, se
+menciona que puede haber congruencia entre el tipo de sistema político y
+las orientaciones que tiene el individuo, sobre todo en términos de
+lealtad o alienación respecto del sistema, dada si las orientaciones son
+positivas o negativas.</p>
+<h4 id="ii.-operacionalización-1">ii. Operacionalización</h4>
+<p>Vemos que el concepto de cultura política de Almond y Verba abarca
+bastantes aspectos y que cada uno puede ser operacionalizado de una
+manera en particular. Es más, ellos ya encuentran la posibilidad de la
+alienación como uno de los resultados de las orientaciones negativas
+hacia las instituciones. No está de más recordar cómo es que la
+alienación puede efectivamente cohibir la participación ciudadana en los
+espacios previamente mencionados. Dados los hallazgos previos, es
+coherente para los objetivos de esta investigación el trabajar
+analizando las orientaciones hacia el cuarto tipo de objeto político:
+los outputs y las orientaciones específicas que se buscan analizar es el
+aspecto evaluativo. Esto debido a que se acerca más a lo que se busca
+modelar, como es que la valoración hacia las municipalidades y las
+consecuencias de su trabajo puede afectar la participación ciudadana en
+otras áreas de participación ciudadana. Entonces lo que se quiere medir
+con esta variable es la percepción de la ciudadanía hacia los outputs
+políticos de las municipalidades.</p>
+<h3 id="c.-cohesión-vecinal">C. Cohesión Vecinal</h3>
+<h4 id="i.-definición-2">i. Definición</h4>
+<p>Cómo ya fue mencionado en la introducción, la cohesión vecinal es la
+forma en la que se expresa las teorías previas sobre la participación de
+las personas en organizaciones como las juntas de vecinos. En este caso
+White (2012) tiene la contribución más relevante a lo que planteamos
+debido a la importancia de estructuras previas a las formaciones
+sociales. Si entendemos que las juntas de vecinos son formaciones
+sociales, lo que implicaría que la teoría es que necesitamos de una
+estructura previa para que la formación social pueda emerger. En este
+caso la cohesión entre los vecinos sería esta estructura previa que es
+independiente de la formación social, que luego permitiría que las
+personas quieran organizarse. De esta forma vemos que la cohesión
+vecinal es más bien el mecanismo causal que permite entender la
+importancia de las formaciones sociales.</p>
+<h4 id="ii.-operacionalización-2">ii. Operacionalización</h4>
+<p>La cohesión vecinal no es una variable que se pueda medir de manera
+directa, por lo que hay que buscar otras variables que si puedan
+representar a lo que nos referimos cuando lo mencionamos. En este caso,
+para medir la cohesión vecinal vamos a utilizar la confianza en los
+vecinos y la confianza en la vecindad de manera más amplia. Un poco más
+adelante se explica de manera más específica cuales son las variables
+que se utilizan para la creación de un índice de cohesión vecinal.</p>
+<h1 id="análisis-exploratorio">Análisis exploratorio</h1>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Para poder medir las tres variables se utiliza una base de datos
+desarrollada por RIMISP en base a la Encuesta de Dinámicas Territoriales
+y Bienestar -EDTB- (La base de datos se puede encontrar en el siguiente
+link: <a
+href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/G9ENDE"
+class="uri">https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/G9ENDE</a>).
+Esta encuesta se realiza en comunas de cuidades medianas y pequeñas de
+tres países, pero dividen las bases de datos según países, siendo la que
+se utiliza la chilena. Si bien esto tiene algunas debilidades, debido a
+que no es explorable hacia ciudades más grandes, si da la posibilidad de
+explorar las situaciones de comunas más pequeñas. Estos históricamente
+han sido desfavorecidos, para dar espacio al estudio de comunas más
+grandes, en particular las que corresponden a la ciudad de Santiago.</p>
+<p>La EDTB pregunta una serie de información a vecinos de estas comunas
+sobre el bienestar y características sociodemográficas, pero para esto
+se realiza una serie de filtros para dejar las preguntas más relevantes.
+Se dejan algunas de las preguntas básicas sobre género, nivel
+educacional, nombre de la comuna y otros. Además se deja la pregunta
+l_15h que consulta sobre la participación del vecino en organizaciones
+vecinales, principalmente juntas de vecinos. Además hay preguntas sobre
+los outputs políticos en la entrega de servicios como la seguridad,
+recolección de basura, mantenimiento de calles y protección civil
+(1_19a, b, c y d). La tercera y última variable se encuentra en
+preguntas relevantes sobre la confianza que tienen las personas en sus
+vecinos (l_12, l_13, l_14, l_20g, l_25a y m_3e). Otras variables que
+tienen valor teórico como variables de control son si participan en las
+elecciones municipales (l_1 y l_5), interés en asuntos políticos (l_6,
+l_8) y acercamiento a autoridades (l_16b). Primero se hará una
+modificación de las variables necesarias.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Para hacer un análisis preliminar y exploratorio se hará un análisis
+de algunas de las preguntas en gráficos descriptivos para hacerse a la
+idea del funcionamiento de la base de datos. Los gráficos se harán en
+base a las dos primeras variables, pues son las que son medidas de
+manera más directa en la encuesta que fue aplicada.</p>
+<p>El primer gráfico para analizar es el de la participación en
+organizaciones vecinales. La pregunta está dispuesta en una respuesta
+dicotómica y vemos que la gran mayoría de personas no participan en
+organizaciones vecinales.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df_jjvv</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>jjvv</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>geom_bar</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>'#000000'</span> , alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Figura 1. Gráfico de barras 'Participación en organización vecinal'(jjvv)"</span><span class='op'>)</span>,</span>
+<span>       subtitle <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Pregunta: '¿En el último año usted ha participado de manera activa en alguno de los siguientes grupos u organizaciones? Organización vecinal (asociación de vivienda o junta de vecinos)'"</span>, <span class='fl'>70</span><span class='op'>)</span>,</span>
+<span>       x<span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Frecuencia"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>scale_x_discrete</span><span class='op'>(</span>breaks<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"1"</span>, <span class='st'>"0"</span>, <span class='cn'>NA</span><span class='op'>)</span>,</span>
+<span>                   labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Si"</span>, <span class='st'>"No"</span>, <span class='st'>"No sabe/No responde"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
+</div>
+<p>Luego vemos las variables que miden la evaluación de servicios
+comunales, lo cual puede ser entendido como una orientación evaluativa
+de los outputs políticos a nivel comunal.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>frq</span><span class='op'>(</span><span class='va'>df_jjvv</span>, <span class='va'>eval_guardia</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>eval_guardia &lt;categorical&gt; 
+# total N=4007 valid N=3136 mean=0.63 sd=0.48
+
+Value |    N | Raw % | Valid % | Cum. %
+---------------------------------------
+    0 | 1156 | 28.85 |   36.86 |  36.86
+    1 | 1980 | 49.41 |   63.14 | 100.00
+ &lt;NA&gt; |  871 | 21.74 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df_jjvv</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>eval_guardia</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>geom_bar</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>'#000000'</span> , alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Figura 2. Gráfico de barras 'Evaluación Servicios Comuna 1'(eval_guardia)"</span><span class='op'>)</span>,</span>
+<span>       subtitle <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Seguridad Ciudadana (Guardia Municipal)'"</span><span class='op'>)</span>,</span>
+<span>       x<span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Frecuencia"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>scale_x_discrete</span><span class='op'>(</span>breaks<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"0"</span>, <span class='st'>"1"</span>, <span class='cn'>NA</span><span class='op'>)</span>,</span>
+<span>                   labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mala/Muy Mala"</span>, <span class='st'>"Buena/Muy Buena"</span>, <span class='st'>"No responde/No aplica"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>frq</span><span class='op'>(</span><span class='va'>df_jjvv</span>, <span class='va'>eval_basura</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>eval_basura &lt;categorical&gt; 
+# total N=4007 valid N=3906 mean=0.83 sd=0.38
+
+Value |    N | Raw % | Valid % | Cum. %
+---------------------------------------
+    0 |  673 | 16.80 |   17.23 |  17.23
+    1 | 3233 | 80.68 |   82.77 | 100.00
+ &lt;NA&gt; |  101 |  2.52 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df_jjvv</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>eval_basura</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>geom_bar</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>'#000000'</span> , alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Figura 3. Gráfico de barras 'Evaluación Servicios Comuna 1'(eval_basura)"</span><span class='op'>)</span>,</span>
+<span>       subtitle <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Recolección de basura'"</span><span class='op'>)</span>,</span>
+<span>       x<span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Frecuencia"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>scale_x_discrete</span><span class='op'>(</span>breaks<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"0"</span>, <span class='st'>"1"</span>, <span class='cn'>NA</span><span class='op'>)</span>,</span>
+<span>                   labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mala/Muy Mala"</span>,<span class='st'>"Buena/Muy Buena"</span>, <span class='st'>"No responde/No aplica"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>frq</span><span class='op'>(</span><span class='va'>df_jjvv</span>, <span class='va'>eval_calles</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>eval_calles &lt;categorical&gt; 
+# total N=4007 valid N=3864 mean=0.62 sd=0.49
+
+Value |    N | Raw % | Valid % | Cum. %
+---------------------------------------
+    0 | 1486 | 37.09 |   38.46 |  38.46
+    1 | 2378 | 59.35 |   61.54 | 100.00
+ &lt;NA&gt; |  143 |  3.57 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df_jjvv</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>eval_calles</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>geom_bar</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>'#000000'</span> , alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Figura 4. Gráfico de barras 'Evaluación Servicios Comuna 1'(eval_calles)"</span><span class='op'>)</span>,</span>
+<span>       subtitle <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Mantenimiento de calles y vias'"</span><span class='op'>)</span>,</span>
+<span>       x<span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Frecuencia"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>scale_x_discrete</span><span class='op'>(</span>breaks<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"0"</span>, <span class='st'>"1"</span>, <span class='cn'>NA</span><span class='op'>)</span>,</span>
+<span>                   labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mala/Muy Mala"</span>, <span class='st'>"Buena/Muy Buena"</span>, <span class='st'>"No responde/No aplica"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>frq</span><span class='op'>(</span><span class='va'>df_jjvv</span>, <span class='va'>eval_proteccion</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>eval_proteccion &lt;categorical&gt; 
+# total N=4007 valid N=2975 mean=0.62 sd=0.49
+
+Value |    N | Raw % | Valid % | Cum. %
+---------------------------------------
+    0 | 1131 | 28.23 |   38.02 |  38.02
+    1 | 1844 | 46.02 |   61.98 | 100.00
+ &lt;NA&gt; | 1032 | 25.75 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df_jjvv</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>eval_proteccion</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>geom_bar</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>'#000000'</span> , alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Figura 5. Gráfico de barras 'Evaluación Servicios Comuna 1'(eval_proteccion)"</span><span class='op'>)</span>,</span>
+<span>       subtitle <span class='op'>=</span> <span class='fu'>str_wrap</span><span class='op'>(</span><span class='st'>"Pregunta: '¿Cómo evaluaría usted la calidad de los siguientes servicios que existen en esta comuna? Protección civil, por ejemplo, frente a terremotos, inundaciones u otros desastres naturales'"</span><span class='op'>)</span>,</span>
+<span>       x<span class='op'>=</span> <span class='st'>""</span>, y <span class='op'>=</span> <span class='st'>"Frecuencia"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>scale_x_discrete</span><span class='op'>(</span>breaks<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"0"</span>, <span class='st'>"1"</span>, <span class='cn'>NA</span><span class='op'>)</span>,</span>
+<span>                   labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mala/Muy Mala"</span>, <span class='st'>"Buena/Muy Buena"</span>, <span class='st'>"No responde/No aploca"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
+</div>
+<p>Vemos que en la mayoría de los casos la gente tiende a tener una
+buena o decente evaluación de los servicios comunales, pero hay una
+mayor varianza en las evaluaciones de Protección civil, Seguridad
+Ciudadana y Mantenimiento de calles.</p>
+<p>Para continuar nuestra exploración de la base de datos de la EDTB, se
+realizarán unas primeras regresiones para analizar de manera preliminar
+las relaciones entre las variables más esenciales. El tipo de regresión
+a utilizar es una de tipo logit, debido a que la variable dependiente es
+una variable de tipo categórica dummy, es decir, está o no está. En este
+caso nuestra variable tiene dos posibilidades, participa o no en una
+junta de vecinos. Las columnas utilizamos para describir nuestra
+variable de outputs políticos son preguntas del 1 al 4 en términos de
+percepción de la entrega de estos servicios de parte de la población.
+Estas variables fueron recodificadas para que fuesen binarias, es decir,
+que tomen un valor de un 0 o un 1, “1” significa que tienen una
+evaluación buena o muy buena de los servicios. Inicialmente se correrán
+cinco regresiones, una con cada una de las variables y una final con las
+cuatro juntas. Ninguna otra variable quedará en este análisis
+inicial.</p>
+<h2 id="primeros-modelos">Primeros Modelos</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>modelo_1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>jjvv</span> <span class='op'>~</span> <span class='va'>eval_guardia</span>, </span>
+<span>                data <span class='op'>=</span> <span class='va'>df_jjvv</span>,</span>
+<span>                family <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/family.html'>binomial</a></span><span class='op'>(</span><span class='st'>"logit"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>modelo_2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>jjvv</span> <span class='op'>~</span> <span class='va'>eval_basura</span>, </span>
+<span>                data <span class='op'>=</span> <span class='va'>df_jjvv</span>,</span>
+<span>                family <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/family.html'>binomial</a></span><span class='op'>(</span><span class='st'>"logit"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>modelo_3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>jjvv</span> <span class='op'>~</span> <span class='va'>eval_calles</span>, </span>
+<span>                data <span class='op'>=</span> <span class='va'>df_jjvv</span>,</span>
+<span>                family <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/family.html'>binomial</a></span><span class='op'>(</span><span class='st'>"logit"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span>                </span>
+<span><span class='va'>modelo_4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>jjvv</span> <span class='op'>~</span> <span class='va'>eval_proteccion</span>, </span>
+<span>                data <span class='op'>=</span> <span class='va'>df_jjvv</span>,</span>
+<span>                family <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/family.html'>binomial</a></span><span class='op'>(</span><span class='st'>"logit"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>modelo_5</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>jjvv</span> <span class='op'>~</span> <span class='va'>eval_guardia</span> <span class='op'>+</span> <span class='va'>eval_basura</span> <span class='op'>+</span> <span class='va'>eval_calles</span> <span class='op'>+</span> <span class='va'>eval_proteccion</span>, </span>
+<span>                data <span class='op'>=</span> <span class='va'>df_jjvv</span>,</span>
+<span>                family <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/family.html'>binomial</a></span><span class='op'>(</span><span class='st'>"logit"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>modelos</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>modelo_1</span>, <span class='va'>modelo_2</span>, <span class='va'>modelo_3</span>, <span class='va'>modelo_4</span>, <span class='va'>modelo_5</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+======================================================================================
+                  Model 1       Model 2       Model 3       Model 4       Model 5     
+--------------------------------------------------------------------------------------
+(Intercept)          -1.18 ***     -1.16 ***     -1.08 ***     -1.08 ***     -1.12 ***
+                     (0.07)        (0.09)        (0.06)        (0.07)        (0.13)   
+eval_guardia1        -0.22 *                                                 -0.05    
+                     (0.09)                                                  (0.11)   
+eval_basura1                       -0.14                                      0.12    
+                                   (0.10)                                    (0.14)   
+eval_calles1                                     -0.29 ***                   -0.18    
+                                                 (0.08)                      (0.12)   
+eval_proteccion1                                               -0.28 **      -0.23 *  
+                                                               (0.09)        (0.11)   
+--------------------------------------------------------------------------------------
+AIC                3199.91       4047.72       4014.19       3110.78       2633.48    
+BIC                3211.98       4060.23       4026.68       3122.75       2662.70    
+Log Likelihood    -1597.95      -2021.86      -2005.09      -1553.39      -1311.74    
+Deviance           3195.91       4043.72       4010.19       3106.78       2623.48    
+Num. obs.          3099          3852          3803          2935          2550       
+======================================================================================
+*** p &lt; 0.001; ** p &lt; 0.01; * p &lt; 0.05</code></pre>
+</div>
+<p>Cómo podemos apreciar, todas las variables tienen significancia
+estadística, exceptuando la variable que mide la percepción del servicio
+de Recolección de Basura. Cuando medimos las cinco variables juntas
+vemos que la única que tiene significancia estadística es la percepción
+del servicio de Protección Civil en casos de emergencia, esto se puede
+deber a que las cuatro variables estén altamente correlacionadas, lo que
+nos indica que el mejor camino a tomar es formar un índice con las
+cuatro preguntas. En términos de direccionalidad vemos que cuando sube
+la evaluación de los servicios municipales, baja la probabilidad de que
+el individuo participe en las juntas de vecinos. Esto mismo vemos cuando
+analizamos los Odds de las regresiones:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>  (Intercept) eval_guardia1 
+    0.3084005     0.8018735 </code></pre>
+<pre><code> (Intercept) eval_basura1 
+   0.3127490    0.8733073 </code></pre>
+<pre><code> (Intercept) eval_calles1 
+   0.3391705    0.7469203 </code></pre>
+<pre><code>     (Intercept) eval_proteccion1 
+       0.3401937        0.7561029 </code></pre>
+</div>
+<p>Por ejemplo, cuando una persona tiene una evaluación positiva de la
+guardia municipal, la probabilidad de que participe en una junta de
+vecinos es de 0.8, lo que en términos de probabilidad, significa que
+disminuye. Este patrón se ve en todas las variables, aunque entre las
+que son significativas (todas menos Recolección de Basura), la que tiene
+un Odd más grande es la evaluación de la Guardia Municipal. En términos
+de comportamiento esto nos indica que las personas tienden a participar
+más en las juntas de vecinos cuando las evaluaciones de los servicios
+públicos de la comuna son negativos.</p>
+<h2 id="modelo-a-utilizar">Modelo a utilizar</h2>
+<p>Esto nos lleva a plantear nuestro modelo que luego va a ser utilizado
+en el resto del trabajo:</p>
+<p><span class="math display">\[Participación\ Juntas\ de\ Vecinos =
+\alpha + \ Evaluación\ Servicios\ X_1+   Cohesión\ vecinal\ X_2 + \\
+Participación\ Elecciónes\ X_3+ Interés\ en\ asuntos\ políticos\ X_4
++  Género\ X_5 + \\  Edad\ X_6+ Estado\ laboral\ X_7 + Comuna\ rural\
+X_8 + \mu  \]</span></p>
+<p>Las variables de Evaluación de Servicios, Cohesión Vecinal e Interés
+en asuntos políticos serán índices. Evaluación de Servicios implican las
+variables ya evaluadas, Cohesión Vecinal incluye preguntas respecto a la
+cantidad de números de teléfonos de vecinos que tiene el individuo
+(n_telefono, n_otorgado), si les pide ayuda a vecinos en casos de
+necesidad y opiniones sobre la ayuda (ayuda_de_vecino, opinion_ayuda),
+el nivel de confianza en los vecinos (confianza_vecinos) y la
+satisfacción que tienen con su barrio de manera más general
+(satisfacción_barrio).</p>
+<p>Las variables de control serán Participación electoral, Interés en
+Asuntos Políticos y variables sociodemográficas. Participación electoral
+se mide cuando se pregunta si es que participó de elecciones municipales
+y las sociodemográficas tienen que ver con género, edad, estado laboral
+y si la comuna es rural. Interés en Asuntos Políticos se medirá con la
+variable ‘interés_politico’, que pregunta directamente esto. Se sumarán
+además otras variables sobre participación en organizaciones políticas
+(org_politica, sindicato, campaña), opinión sobre la democracia
+(opinion_democracia) y comportamiento del voto de manera más amplia
+(voto_comp). Se separa el voto y el comportamiento general del voto,
+pues se entiende que hay una diferencia entre el voto en una ocasión
+particular y el voto como un hábito, que muestra el interés en la
+política de manera más general que puntual.</p>
+<p>Participación en elecciones es utilizado como una variable de control
+se entiende que el voto es una forma primera de participación, previa al
+involucramiento en organizaciones (Lijphart, 1997). Además, se ve que la
+mayoría de las personas que participan en las movilizaciones en 2019 si
+eran personas que votaban (Leibe, Palanza y Sánchez, 2021), por lo que
+se puede esperar que sea similar en el caso de la participación
+ciudadana. El Interés en la Política se ve como esencial para la
+participación en elecciones (Blais, Young y Lapp, 2000), por lo que es
+interesante ver cómo afecta en otras formas de participación.</p>
+<h3 id="hipótesis">Hipótesis</h3>
+<p>Teniendo en cuenta la exploración previa y la teoría veríamos que la
+direccionalidad de la Evaluación de Servicios y la Cohesión Vecinal es
+bastante clara. Mientras la mejor sea la Evaluación de Servicios del
+municipio, menor la participación en juntas de vecinos. Mientras mayor
+sea la Cohesión Vecinal, mayor debiese ser la participación en juntas de
+vecinos. Queda ahora la pregunta de ¿Cuál es más importante? En este
+sentido (y sumado a las hipótesis nulas de rigor) tendríamos dos
+hipótesis.</p>
+<h4 id="hipótesis-1">Hipótesis 1</h4>
+<p>La probabilidad de participar en la junta de vecinos está más
+influenciada por la Evaluación de Servicios Municipales que por la
+Cohesión Vecinal.</p>
+<h4 id="hipótesis-2">Hipótesis 2</h4>
+<p>La probabilidad de participar en la junta de vecinos está menos
+influenciada por la Evaluación de Servicios Municipales que por la
+Cohesión Vecinal.</p>
+<h1 id="creación-de-índices">Creación de Índices</h1>
+<h2 id="índice-de-evaluación-de-servicios">Índice de Evaluación de
+Servicios</h2>
+<p>Debido a los resultados exploratorios y la sospecha de alta
+correlación entre las variables de Evaluación de Servicios Municipales,
+se analiza la posibilidad de generar un índice con las variables, por lo
+que se utiliza la técnica PCA. Lo primero que debemos hacer es un
+análisis de correlación entre las cuatro variables.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>                 eval_guardia1 eval_basura1 eval_calles1
+eval_guardia1        1.0000000    0.2246098    0.3350290
+eval_basura1         0.2246098    1.0000000    0.3672793
+eval_calles1         0.3350290    0.3672793    1.0000000
+eval_proteccion1     0.3836664    0.2953453    0.4136563
+                 eval_proteccion1
+eval_guardia1           0.3836664
+eval_basura1            0.2953453
+eval_calles1            0.4136563
+eval_proteccion1        1.0000000</code></pre>
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-12-1.png" width="624" /></p>
+</div>
+<p>Vemos que las cuatro variables tienen una buena correlación, aunque
+no sea demasiado alta, lo cual era sospechado previamente en los
+análisis exploratorios y las primeras regresiones. Luego procedemos a
+generar un PCA, además de analizar los eigenvalues y generar el Scree
+plot para decidir cuáles serán los pesos de las dimensiones que se
+incluyan en el índice final.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>      eigenvalue variance.percent cumulative.variance.percent
+Dim.1  1.8631631         46.57908                    46.57908
+Dim.2  0.8481190         21.20298                    67.78205
+Dim.3  0.6832307         17.08077                    84.86282
+Dim.4  0.6054871         15.13718                   100.00000</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-14-1.png" width="624" /></p>
+</div>
+<p>En el Scree plot vemos que solamente la primera variable pasa el
+límite deseable de 1, pero cuando analizamos los eigenvalues y el aporte
+que hacen a la varianza de la muestra, esto no es suficiente para la
+creación del índice por sí solo. Para analizar de manera más profunda
+cuáles son las dimensiones para utilizar para crear el índice, se
+analizarán las contribuciones de las variables a cada una de las
+dimensiones.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-15-1.png" width="624" /><img src="entrega-final_files/figure-html5/unnamed-chunk-15-2.png" width="624" /><img src="entrega-final_files/figure-html5/unnamed-chunk-15-3.png" width="624" /><img src="entrega-final_files/figure-html5/unnamed-chunk-15-4.png" width="624" /></p>
+</div>
+<p>Dado que las cuatro variables responden a la Evaluacion de Servicios
+municipales, no hay grandes diferencias teóricas respecto de las
+diferentes dimensiones, por lo que se eligen respecto a la
+representación de variables en las dimensiones. Gracias a estos gráficos
+vemos que si incluimos las tres primeras dimensiones tenemos una
+representación de las cuatro preguntas, aunque vemos que la que menos
+aporta es la de Protección Civil. Esto tiene sentido, pues es una
+pregunta que refiere a casos extremos o emergencias, por lo que es
+comprensible que muchas personas no les interese, además es la variable
+con más NA. De esta manera se eligen las tres primeras dimensiones,
+porque a pesar de que las Dimensiones 2 y 3 no superan el límite en el
+Scree Plot, si aportan a la varianza explicada y a la representación de
+las cuatro variables en el índice. A continuación se forma el
+índice:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>indice_evaluacion</span> <span class='op'>&lt;-</span> <span class='va'>pca_evaluacion</span><span class='op'>$</span><span class='va'>ind</span><span class='op'>$</span><span class='va'>coord</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>as_tibble</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>mutate</span><span class='op'>(</span>evaluacion_serv <span class='op'>=</span> <span class='op'>(</span><span class='va'>Dim.1</span> <span class='op'>*</span> <span class='fl'>46.57908</span> <span class='op'>+</span> <span class='va'>Dim.2</span> <span class='op'>*</span> <span class='fl'>21.20298</span> <span class='op'>+</span> <span class='va'>Dim.4</span> <span class='op'>*</span><span class='fl'>17.08077</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>84.86282</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>df_jjvv</span> <span class='op'>&lt;-</span> <span class='va'>df_jjvv</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>bind_cols</span><span class='op'>(</span><span class='va'>indice_evaluacion</span> <span class='op'>%&gt;%</span> <span class='fu'>select</span><span class='op'>(</span><span class='va'>evaluacion_serv</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>rescale01</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='va'>rng</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/range.html'>range</a></span><span class='op'>(</span><span class='va'>x</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span>  <span class='op'>(</span><span class='va'>x</span> <span class='op'>-</span> <span class='va'>rng</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>/</span> <span class='op'>(</span><span class='va'>rng</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>-</span> <span class='va'>rng</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>df_jjvv</span> <span class='op'>&lt;-</span> <span class='va'>df_jjvv</span> <span class='op'>%&gt;%</span></span>
+<span>  <span class='fu'>mutate</span><span class='op'>(</span>evaluacion_serv <span class='op'>=</span> <span class='fu'>rescale01</span><span class='op'>(</span><span class='va'>evaluacion_serv</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<h2 id="índice-de-cohesión-vecinal">Índice de Cohesión Vecinal</h2>
+<p>El proceso de creación de índice de Cohesión Vecinal es muy similar
+al de Evaluación de Servicios Municipales, aunque es por otras razones.
+La Cohesión Vecinal es una variable latente, pero no observable, por lo
+que utilizamos variables observables en conjunción como un proxy para el
+análisis de la variable que nos interesa. En este caso utilizamos las
+variables que se mencionaron cuando se definió el Modelo a utilizar. A
+continuación analizamos la correlación entre las siete variables.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>                    n_telefono n_otorgado dinero_prestado
+n_telefono          1.00000000 0.88820690      0.17638662
+n_otorgado          0.88820690 1.00000000      0.16511922
+dinero_prestado     0.17638662 0.16511922      1.00000000
+ayuda_de_vecino     0.17584210 0.18190099      0.07426899
+confianza_vecinos   0.17833443 0.16727249      0.12322545
+opinion_ayuda       0.05364280 0.05375590      0.07700295
+satisfaccion_barrio 0.08652419 0.08243431      0.04191447
+                    ayuda_de_vecino confianza_vecinos opinion_ayuda
+n_telefono              0.175842103       0.178334432  0.0536427998
+n_otorgado              0.181900987       0.167272485  0.0537559013
+dinero_prestado         0.074268987       0.123225450  0.0770029463
+ayuda_de_vecino         1.000000000       0.089437797  0.0252066755
+confianza_vecinos       0.089437797       1.000000000 -0.0037659467
+opinion_ayuda           0.025206675      -0.003765947  1.0000000000
+satisfaccion_barrio     0.003255339       0.302254957  0.0004817192
+                    satisfaccion_barrio
+n_telefono                 0.0865241876
+n_otorgado                 0.0824343134
+dinero_prestado            0.0419144686
+ayuda_de_vecino            0.0032553386
+confianza_vecinos          0.3022549569
+opinion_ayuda              0.0004817192
+satisfaccion_barrio        1.0000000000</code></pre>
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-18-1.png" width="624" /></p>
+</div>
+<p>Vemos que lamentablemente las cuatro variables no tienen muy buena
+correlación entre sí, a excepción de las variables de número de
+teléfono. Esto es porque tiene sentido lógico, pues tener los teléfonos
+de tus vecinos no es una relación unidireccional, sino que cuando te dan
+el número de tu vecino, en general das tu número para que el contacto
+sea bilateral. Si bien la situación respecto de la correlación no es
+ideal desde un punto de vista teórico, se continua con el proceso de
+generar un PCA y su Scree Plot.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>      eigenvalue variance.percent cumulative.variance.percent
+Dim.1  2.1232360        30.331942                    30.33194
+Dim.2  1.2064438        17.234912                    47.56685
+Dim.3  1.0208149        14.583070                    62.14992
+Dim.4  0.9335181        13.335973                    75.48590
+Dim.5  0.9069322        12.956175                    88.44207
+Dim.6  0.6960655         9.943793                    98.38586
+Dim.7  0.1129895         1.614136                   100.00000</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-20-1.png" width="624" /></p>
+</div>
+<p>Un análisis entre el Scree Plot y los eigenvalues del PCA nos indica
+que lo mejor es utilizar las tres primeras dimensiones, pues pasan el
+umbral que vemos en el Scree Plot y logran reprsentar una buena cantidad
+de la varianza de la muestra.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-21-1.png" width="624" /><img src="entrega-final_files/figure-html5/unnamed-chunk-21-2.png" width="624" /><img src="entrega-final_files/figure-html5/unnamed-chunk-21-3.png" width="624" /><img src="entrega-final_files/figure-html5/unnamed-chunk-21-4.png" width="624" /><img src="entrega-final_files/figure-html5/unnamed-chunk-21-5.png" width="624" /></p>
+</div>
+<p>Cuando vemos las dimensiones podemos ver las dimensiones teóricas de
+manera clara: - La Dimensión 1 presenta esta idea clara de la
+comunicación con tus vecinos, representada por los números de teléfonos
+intercambiados. - La Dimensión 2 se puede ver como la confianza con la
+comunidad, sea con el barrio de manera abstracta o con los vecinos de
+manera más concreta. - La Dimensión 3 vemos la importancia de la ayuda
+mutua dentro de la comunidad como una muestra de la cohesión con los
+vecinos.</p>
+<p>A partir de esto generamos un índice:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>       Dim.1       Dim.2      Dim.3       Dim.4      Dim.5
+1 -0.8736164  0.05372258  1.1390261 -0.15326220  0.2283102
+2  0.8367040 -0.77085736  1.6126805 -0.74239468 -0.8963016
+3 -1.0185529 -0.27478406  1.5729141 -0.42857975 -0.1966695
+4  0.1200686 -2.59091378 -0.2040291  0.22390055 -1.7604759
+5  1.0198335  1.12437480 -0.7375057 -0.41360856 -0.1967383
+6  0.9426278 -1.44200892  1.6775492 -0.02825462 -1.5310394</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>indice_cohesion</span> <span class='op'>&lt;-</span> <span class='va'>pca_cohesion</span><span class='op'>$</span><span class='va'>ind</span><span class='op'>$</span><span class='va'>coord</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>as_tibble</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>mutate</span><span class='op'>(</span>indice_cohesion_vecinal <span class='op'>=</span> <span class='op'>(</span><span class='va'>Dim.1</span> <span class='op'>*</span> <span class='fl'>30.331942</span> <span class='op'>+</span> <span class='va'>Dim.2</span> <span class='op'>*</span> <span class='fl'>17.234912</span> <span class='op'>+</span> <span class='va'>Dim.3</span> <span class='op'>*</span><span class='fl'>14.583070</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>62.14992</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>df_jjvv</span> <span class='op'>&lt;-</span> <span class='va'>df_jjvv</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>bind_cols</span><span class='op'>(</span><span class='va'>indice_cohesion</span> <span class='op'>%&gt;%</span>  <span class='fu'>select</span><span class='op'>(</span><span class='va'>indice_cohesion_vecinal</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>rescale01</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='va'>rng</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/range.html'>range</a></span><span class='op'>(</span><span class='va'>x</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span>  <span class='op'>(</span><span class='va'>x</span> <span class='op'>-</span> <span class='va'>rng</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>/</span> <span class='op'>(</span><span class='va'>rng</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>-</span> <span class='va'>rng</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>df_jjvv</span> <span class='op'>&lt;-</span> <span class='va'>df_jjvv</span> <span class='op'>%&gt;%</span></span>
+<span>  <span class='fu'>mutate</span><span class='op'>(</span>indice_cohesion_vecinal <span class='op'>=</span> <span class='fu'>rescale01</span><span class='op'>(</span><span class='va'>indice_cohesion_vecinal</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<h3 id="análisis-de-cluster-del-índice-de-cohesión-vecinal">Análisis de
+Cluster del Índice de Cohesión Vecinal</h3>
+<p>Debido a que la Cohesión Vecinal fue la única variable que no fue
+posible analizar en los análisis preliminares, se hará un análisis de
+Clusters para poder entender mejor la muestra que obtenemos. Debido a la
+cantidad de variables no podemos hacer un análisis de distancia, así que
+pasamos directamente al análisis de Clusters con un Cluster plot. Se
+prueba hace un plot con dos Clusters y el resultado es el siguiente:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>df_clusters</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/na.fail.html'>na.omit</a></span><span class='op'>(</span><span class='va'>indice_cohesion</span><span class='op'>)</span></span>
+<span><span class='va'>df_clusters</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span><span class='op'>(</span><span class='va'>indice_cohesion</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>clusters1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/kmeans.html'>kmeans</a></span><span class='op'>(</span><span class='va'>df_clusters</span>, centers <span class='op'>=</span> <span class='fl'>2</span>, nstart <span class='op'>=</span> <span class='fl'>25</span><span class='op'>)</span></span>
+<span><span class='fu'>fviz_cluster</span><span class='op'>(</span><span class='va'>clusters1</span>, <span class='va'>df_clusters</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-24-1.png" width="624" /></p>
+</div>
+<p>De manera visual podemos asumir que se forman dos clusters, uno en la
+parte superior y otra en la parte inferior. Sin embargo, cuando de
+manera matemática vemos los dos clusters separados por la sección
+derecha e izquierda, lo cual no corresponde con la intuición visual, por
+lo que se prueba con tres Clusters en el siguiente gráfico:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-25-1.png" width="624" /></p>
+</div>
+<p>Vemos que se forman tres clusters de una manera un poco más
+intuitiva, pues el Cluster en la parte superior es más claro, aunque la
+separación entre los Clusters 1 y 3 son bastante poco distintivos. A
+partir de esto se prueba hacer 4 Clusters:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-26-1.png" width="624" /></p>
+</div>
+<p>Vemos que el segundo Cluster visual es separado en tres y las
+distancias entre los Clusters 2, 3 y 4 es imposible de analizar. De esta
+manera se comprende que vemos una diferencia muy fuerte entre quienes
+confían en su comunidad (Dim.2) y quienes contactan a su comunidad
+(Dim.1). Si bien desde un punto de vista intuitivo esto tiene sentido,
+desde un punto de vista Matemático R no logra hacer esta diferenciación
+de manera directa.</p>
+<h2 id="índice-de-interés-político">Índice de Interés Político</h2>
+<p>El último índice para realizar es el que fue mencionado como una
+variable de control, el Índice de Interés Político, para el cual
+utilizamos las variables que mencionamos previamente cuando se presenta
+el modelo. El primer paso para el PCA es como siempre el análisis de
+correlación de las seis variables.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>                    voto_comp1 interes_politico1   campaña1
+voto_comp1          1.00000000        0.31728745 0.14915766
+interes_politico1   0.31728745        1.00000000 0.36497876
+campaña1            0.14915766        0.36497876 1.00000000
+org_politica1       0.08913216        0.20182175 0.17752303
+sindicato1          0.01993304        0.05913244 0.03058523
+opinion_democracia1 0.06306662        0.10087202 0.07106377
+                    org_politica1  sindicato1 opinion_democracia1
+voto_comp1            0.089132158 0.019933038          0.06306662
+interes_politico1     0.201821749 0.059132442          0.10087202
+campaña1              0.177523026 0.030585229          0.07106377
+org_politica1         1.000000000 0.008634996          0.01720945
+sindicato1            0.008634996 1.000000000          0.03812566
+opinion_democracia1   0.017209454 0.038125663          1.00000000</code></pre>
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-28-1.png" width="624" /></p>
+</div>
+<p>Vemos nuevamente que las correlaciones no son tan fuertes como se
+esperaría para un PCA, pero se continúa con el proceso para analizar los
+eigenvalues y el Scree Plot.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>      eigenvalue variance.percent cumulative.variance.percent
+Dim.1  1.6890436         28.15073                    28.15073
+Dim.2  1.0217910         17.02985                    45.18058
+Dim.3  0.9635140         16.05857                    61.23914
+Dim.4  0.9163101         15.27184                    76.51098
+Dim.5  0.8248915         13.74819                    90.25917
+Dim.6  0.5844498          9.74083                   100.00000</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-30-1.png" width="624" /></p>
+</div>
+<p>A partir de esto vemos que las primeras tres dimensiones superan el
+umbral para entrar dentro de un índice y estas representan un buen
+porcentaje de la varianza de la muestra, por lo que pasamos a ver las
+dimensiones.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="entrega-final_files/figure-html5/unnamed-chunk-31-1.png" width="624" /><img src="entrega-final_files/figure-html5/unnamed-chunk-31-2.png" width="624" /><img src="entrega-final_files/figure-html5/unnamed-chunk-31-3.png" width="624" /><img src="entrega-final_files/figure-html5/unnamed-chunk-31-4.png" width="624" /><img src="entrega-final_files/figure-html5/unnamed-chunk-31-5.png" width="624" /></p>
+</div>
+<p>Vemos que la primera dimensión se ve representada por la pregunta
+directa sobre interés político, por lo que puede ser definida como esto.
+La segunda y la tercera dimensión no tienen mucha diferencia respecto de
+las variables que contribuyen y ambas pueden ser catalogadas como
+democratización fuera de las elecciones, sobre todo cuando consideramos
+la sindicalización como una fuente de democratización, según Pateman
+(1970). Sin embargo, esta indistinción entre las dos dimensiones lleva a
+cuestionar la presencia de ambas en el índice, por lo que se analiza la
+cuarta dimensión, que si bien no pasa el umbral en el Scree Plot, si
+está bastante cerca y aporta a la varianza un porcentaje muy similar a
+la dimensión 3. La dimensión 4 es el comportamiento político de manera
+más concreta, es decir, la participación en organizaciones políticas y
+el votar de manera habitual. De esta manera, se decide utilizar la
+dimensión 4 y no la tercera dentro de la formación del índice a
+continuación:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>       Dim.1      Dim.2      Dim.3      Dim.4       Dim.5
+1  0.4741961  0.4897557 -0.7873625  0.2459174  0.23919599
+2 -1.1762846  0.5964792 -0.6686209  1.0451893 -0.06227916
+3 -1.6097133  0.6316335 -0.5134091  1.6483636 -0.48386172
+4 -1.8969740 -0.2816605  0.5335900  1.0661420 -0.63903754
+5  1.4361324  0.4881775 -0.9844520 -0.5981912  0.48081425
+6  0.4208505  0.5359962 -0.8274377  0.1506604  0.15925559</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>indice_interes</span> <span class='op'>&lt;-</span> <span class='va'>pca_interes</span><span class='op'>$</span><span class='va'>ind</span><span class='op'>$</span><span class='va'>coord</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>as_tibble</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>mutate</span><span class='op'>(</span>indice_interes_pol <span class='op'>=</span> <span class='op'>(</span><span class='va'>Dim.1</span> <span class='op'>*</span> <span class='fl'>28.15073</span> <span class='op'>+</span> <span class='va'>Dim.2</span> <span class='op'>*</span> <span class='fl'>17.02985</span> <span class='op'>+</span> <span class='va'>Dim.4</span> <span class='op'>*</span><span class='fl'>15.27184</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>60.54242</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>df_jjvv</span> <span class='op'>&lt;-</span> <span class='va'>df_jjvv</span> <span class='op'>%&gt;%</span> </span>
+<span>  <span class='fu'>bind_cols</span><span class='op'>(</span><span class='va'>indice_interes</span> <span class='op'>%&gt;%</span>  <span class='fu'>select</span><span class='op'>(</span><span class='va'>indice_interes_pol</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>rescale01</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='va'>rng</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/range.html'>range</a></span><span class='op'>(</span><span class='va'>x</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span>  <span class='op'>(</span><span class='va'>x</span> <span class='op'>-</span> <span class='va'>rng</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>/</span> <span class='op'>(</span><span class='va'>rng</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>-</span> <span class='va'>rng</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>df_jjvv</span> <span class='op'>&lt;-</span> <span class='va'>df_jjvv</span> <span class='op'>%&gt;%</span></span>
+<span>  <span class='fu'>mutate</span><span class='op'>(</span>indice_interes_pol <span class='op'>=</span> <span class='fu'>rescale01</span><span class='op'>(</span><span class='va'>indice_interes_pol</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<h1 id="modelos-y-resultados-finales">Modelos y Resultados Finales</h1>
+<p>Utilizando los índices previamente creados y las variables de
+control, creamos la siguiente regresión logística y a partir de esto
+vemos además los resultados de esta.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>modelo_6</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>jjvv</span> <span class='op'>~</span> <span class='va'>evaluacion_serv</span> <span class='op'>+</span> <span class='va'>indice_interes_pol</span> <span class='op'>+</span> <span class='va'>indice_cohesion_vecinal</span> <span class='op'>+</span> <span class='va'>voto</span> <span class='op'>+</span> <span class='va'>mujer</span> <span class='op'>+</span> <span class='va'>edad</span> <span class='op'>+</span> <span class='va'>trabajo</span> <span class='op'>+</span> <span class='va'>rural</span>, </span>
+<span>                data <span class='op'>=</span> <span class='va'>df_jjvv</span>,</span>
+<span>                family <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/family.html'>binomial</a></span><span class='op'>(</span><span class='st'>"logit"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'>screenreg</span><span class='op'>(</span><span class='va'>modelo_6</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>
+=====================================
+                         Model 1     
+-------------------------------------
+(Intercept)                 -3.92 ***
+                            (0.22)   
+evaluacion_serv             -0.60 ***
+                            (0.14)   
+indice_interes_pol           1.66 ***
+                            (0.37)   
+indice_cohesion_vecinal      3.56 ***
+                            (0.30)   
+voto1                        0.35 ***
+                            (0.09)   
+mujer1                       0.34 ***
+                            (0.09)   
+edad                         0.00    
+                            (0.00)   
+trabajo1                     0.14    
+                            (0.09)   
+rural1                       0.67 ***
+                            (0.08)   
+-------------------------------------
+AIC                       3811.08    
+BIC                       3867.53    
+Log Likelihood           -1896.54    
+Deviance                  3793.08    
+Num. obs.                 3915       
+=====================================
+*** p &lt; 0.001; ** p &lt; 0.01; * p &lt; 0.05</code></pre>
+</div>
+<p>Vemos que las direccionalidades de las variables responden a lo que
+previamente se planteó: la direccionalidad de la Evaluación de Servicios
+es negativa y la de Cohesión Vecinal es positiva. Vemos además que todas
+las variables exceptuando edad y estado laboral son significativas, por
+lo que se forma un nuevo modelo que no tome en cuenta estas dos
+variables.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>modelo_7</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>jjvv</span> <span class='op'>~</span> <span class='va'>evaluacion_serv</span> <span class='op'>+</span> <span class='va'>indice_interes_pol</span> <span class='op'>+</span> <span class='va'>indice_cohesion_vecinal</span> <span class='op'>+</span> <span class='va'>voto</span> <span class='op'>+</span> <span class='va'>mujer</span> <span class='op'>+</span> <span class='va'>rural</span>, </span>
+<span>                data <span class='op'>=</span> <span class='va'>df_jjvv</span>,</span>
+<span>                family <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/family.html'>binomial</a></span><span class='op'>(</span><span class='st'>"logit"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>modelos_2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>modelo_6</span>, <span class='va'>modelo_7</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'>screenreg</span><span class='op'>(</span><span class='va'>modelos_2</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>
+===================================================
+                         Model 1       Model 2     
+---------------------------------------------------
+(Intercept)                 -3.92 ***     -3.68 ***
+                            (0.22)        (0.20)   
+evaluacion_serv             -0.60 ***     -0.60 ***
+                            (0.14)        (0.14)   
+indice_interes_pol           1.66 ***      1.69 ***
+                            (0.37)        (0.37)   
+indice_cohesion_vecinal      3.56 ***      3.55 ***
+                            (0.30)        (0.30)   
+voto1                        0.35 ***      0.36 ***
+                            (0.09)        (0.09)   
+mujer1                       0.34 ***      0.30 ***
+                            (0.09)        (0.09)   
+edad                         0.00                  
+                            (0.00)                 
+trabajo1                     0.14                  
+                            (0.09)                 
+rural1                       0.67 ***      0.67 ***
+                            (0.08)        (0.08)   
+---------------------------------------------------
+AIC                       3811.08       3812.43    
+BIC                       3867.53       3856.34    
+Log Likelihood           -1896.54      -1899.22    
+Deviance                  3793.08       3798.43    
+Num. obs.                 3915          3915       
+===================================================
+*** p &lt; 0.001; ** p &lt; 0.01; * p &lt; 0.05</code></pre>
+</div>
+<p>Cuando hacemos una comparación entre ambos modelos no hay mucho
+cambio cuando sacamos las variables y en general los coeficientes son
+bastante similares en ambos modelos, por lo que se analizan los Odds
+luego.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>            (Intercept)         evaluacion_serv 
+              0.0252501               0.5471407 
+     indice_interes_pol indice_cohesion_vecinal 
+              5.3929473              34.7868501 
+                  voto1                  mujer1 
+              1.4352809               1.3523990 
+                 rural1 
+              1.9607532 </code></pre>
+</div>
+<p>Los Odds que más nos interesan son los de nuestras variables de
+análisis: Evaluación de Servicios y Cohesión Vecinal. Vemos que un
+cambio positivo de Evaluación de Servicios genera que las posibilidades
+de participar en una junta de vecinos se multipliquen por 0.54, lo que
+es más o menos sea la mitad que una Evaluación de Servicios negativa.
+Sin embargo, la Cohesión Vecinal es mucho más significativa a un nivel
+sustancial, pues un cambio positivo de la Cohesión Vecinal significa que
+la posibilidad de participar en una junta de vecinos es alrededor de 35
+veces mayor.</p>
+<h1 id="conclusiones">Conclusiones</h1>
+<p>Dada la forma en la que fueron planteadas las hipótesis, era
+necesario que una fallase para que la otra tuviese sentido y lo que se
+puede ver a partir de las regresiones que se analizan es que la
+hipótesis 2 es la que más representa la realidad. Esto tiene sentido,
+porque la hipótesis 2 era la que más sustento teórico tiene, la cohesión
+vecinal es mucho más influyente en tomar la decisión de participar en
+una junta de vecinos que la evaluación del trabajo de una municipalidad.
+Lo anterior no significa que la evaluación de servicios sea algo que no
+influya en la decisión, pero parece ser que las motivaciones para
+participar en una junta de vecinos van mucho más allá de la indignación
+de sobre las acciones de la municipalidad. Participar en una junta de
+vecinos parece responder al sentimiento de comunidad, de participar y
+trabajar en pos de la comunidad y parece ser que la idea que motiva a la
+participación es la empatía más que algo meramente reactivo al accionar
+de un agente externo.</p>
+<p>El trabajo presenta varias limitaciones, entre ellas la base de datos
+y la calidad de las respuestas. Particularmente en los índices vemos una
+falta de correlación que hace que la aplicación de un PCA pueda ser
+visto con malos ojos, similar a la forma en la que funciona el análisis
+de cluster. Sin embargo, este trabajo igualmente presenta un posible
+camino de investigación posterior, particularmente las motivaciones de
+la participación y esto nos puede llevar a fortalecer las juntas de
+vecinos como lugares de formación política.</p>
+<h1 id="referencias-bibliográficas">Referencias Bibliográficas</h1>
+<p>Almond, G. A., &amp; Verba, S. (1963). The civic culture: Political
+attitudes and democracy in five nations. Princeton University Press.</p>
+<p>Blais, A., Young, R., &amp; Lapp, M. (2000). The calculus of voting:
+An empirical test. European Journal of Political Research, 37(2),
+181-201.</p>
+<p>Cáceres J., G. (1983). Algunos antecedentes sobre la génesis de las
+juntas de vecinos en Chile. Revista de trabajo social [artículo de
+revista].</p>
+<p>Cantillan, Roberto, &amp; Herrera, José. (2020). Centralidad de
+actores y bloques en las redes organizativas de movilización en el
+conflicto por el Plan Regulador Comunal de Peñalolén el año 2011. EURE,
+46(138), 25-46.</p>
+<p>De la Fuente, G. (2013) Mitos y realidades de la participación
+ciudadana en Chile. En De la Fuente, G. &amp; Mlynarz, D. (Eds.) El
+pueblo unido: mitos y realidades de la participación ciudaana en Chile.
+(pp. 15-38). Ediciones Universidad Alberto Hurtado.</p>
+<p>Eagly, A. &amp; Chaiken S. (1998) Attitude Structure and Function. En
+Gilbert, D., S. Fiske &amp; G. Lindzey (Eds.), The Handbook of Social
+Psychology (pp. 269-310). McGraw Hill.</p>
+<p>Marcus, G. E. (2013). Political psychology: Neuroscience, genetics,
+and politics. Oxford University Press.</p>
+<p>Leibe, L. M., Palanza, V., &amp; Staniak, F. S. (2022). ¿ Voto versus
+Protesta? La movilización como mecanismo de participación ciudadana.
+Polis. Revista Latinoamericana, (61).</p>
+<p>Lijphart, A. (1997). Unequal participation: Democracy’s unresolved
+dilemma presidential address, American Political Science Association,
+1996. American political science review, 91(1), 1-14.</p>
+<p>Pateman, Carole (1970). Participation and Democratic Theory.
+Cambridge: Cambridge University Press.</p>
+<p>Smith, G. (2009). Democratic innovations: Designing institutions for
+citizen participation. Cambridge University Press.</p>
+<p>Tilly, C. (2000). La desigualdad persistente. Buenos Aires:
+Manantial.</p>
+<p>Tilly, C. (2010). Democracia. Madrid: Akal.</p>
+<p>White, H. (2012). Identity and Control : How Social Formations Emerge
+- Second Edition (Second. ed.).</p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

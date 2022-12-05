@@ -1,0 +1,171 @@
+---
+title: "Prueba PCA"
+description: |
+  Trabajo de PCA
+author:
+  - name: Felipe Garrido
+    url: https://fgarrido-m.github.io/
+categories:
+  - Talleres
+date: 03-11-2022
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+participacion_df <- read_dta("e1_chile_especiales_1.dta")
+
+df_part_corta <- participacion_df %>% 
+  select(region, comuna, tipo_localidad, edad_informada, genero, laboralmente, j_4_c1, l_1, l_5, l_6, l_8, l_12, l_15h, l_16a, l_16b, l_19a, l_19b,l_19c, l_19d, l_20g,  m_3d, m_3e, m_3f)
+
+df_pca <- df_part_corta %>% 
+  set_na(j_4_c1, na = 99) %>% 
+  set_na(l_5, na = 9) %>% 
+  set_na(L_6, na = 9) %>% 
+  set_na(l_8, na = 9) %>% 
+  set_na(l_12, na = 9) %>% 
+  set_na(l_15h, na = 9) %>% 
+  set_na(l_16a, na = 9) %>% 
+  set_na(l_16b, na = 9) %>% 
+  set_na(l_19a, na = c(7, 9)) %>% 
+  set_na(l_19b, na = c(7, 9)) %>% 
+  set_na(l_19c, na = c(7, 9)) %>%  
+  set_na(l_19d, na = c(7, 9)) %>%
+  set_na(l_20g, na = 9) %>% 
+  set_na(m_3d, na = 9) %>% 
+  set_na(m_3e, na = 9) %>% 
+  set_na(m_3f, na = 9) %>% 
+  mutate(rural = as.factor(recode(tipo_localidad, "1" = "0", "2" = "1")),
+         edad = as.numeric(edad_informada),
+         mujer = as.factor(recode(genero, "1" = "0", "2" = "1")),
+         trabajo = as.factor(recode(laboralmente,"1" = "1", "2" = "0")),
+         nivel_educacion = as.factor(j_4_c1), 
+         voto = as.factor(recode(l_1, "1" = "1", "2" = "0")),
+         voto_comp = as.numeric(recode(l_5, "1" = "4", "2" = "3", "3" = "2", "4" = "1")),
+         asuntos = as.numeric(recode(l_6, "1" = "4", "2" = "3", "3" = "2", "4" = "1")),
+         partido = as.factor(recode(l_8, "1" = "1", "2" = "0")),
+         n_telefono = as.factor(l_12),
+         j_vecinos = as.factor(recode(l_15h, "1" = "1", "2" = "0")),
+         coop_vecino = as.factor(recode(l_16a,  "1" = "1", "2" = "0")),
+         coop_autoridad = as.factor(recode(l_16b,  "1" = "1", "2" = "0")),
+         guardia_muni = as.numeric(recode(l_19a, "1" = "4", "2" = "3", "3" = "2", "4" = "1")),
+         rec_basura = as.numeric(recode(l_19b, "1" = "4", "2" = "3", "3" = "2", "4" = "1")),
+         mant_calles = as.numeric(recode(l_19c, "1" = "4", "2" = "3", "3" = "2", "4" = "1")),
+         prot_civil = as.numeric(recode(l_19d, "1" = "4", "2" = "3", "3" = "2", "4" = "1")),
+         confianza = as.factor(l_20g),
+         seguridad = as.factor(m_3d),
+         barrio = as.factor(m_3e),
+         ciudad = as.factor(m_3f)) %>% 
+  select(region, comuna, rural, edad, mujer, trabajo, nivel_educacion, voto, voto_comp, asuntos, partido, n_telefono, j_vecinos, coop_vecino, coop_autoridad, guardia_muni, rec_basura, mant_calles, prot_civil, confianza, seguridad, barrio, ciudad)
+```
+
+
+```{r}
+library(tidyverse)
+library(haven)
+library(GGally)
+library(factoextra)
+library(kableExtra)
+library(sjmisc)
+library(lubridate)
+library(labelled)
+library(corrplot)
+library(margins)
+library(prediction)
+library(texreg)
+library(jtools)
+library(pscl)
+library(broom)
+library(plotROC)
+library(gridExtra)
+library(gtable)
+library(plotly)
+library(FactoMineR)
+```
+
+```{r}
+datos_pca_vars <- df_pca %>%
+  select(voto_comp, asuntos, guardia_muni, rec_basura, mant_calles, prot_civil)
+```
+
+```{r}
+cor(na.omit(datos_pca_vars))
+
+ggcorr(datos_pca_vars, label = T)
+```
+
+```{r}
+pca_1 <- PCA(datos_pca_vars, graph = F)
+
+get_eig(pca_1)
+```
+
+
+```{r}
+fviz_eig(pca_1, choice = "eigenvalue", addlabels = T)
+```
+
+```{r}
+fviz_contrib(pca_1, choice = "var", axes = 1)
+
+#Dimensión de evaluación de servicios
+```
+
+```{r}
+fviz_contrib(pca_1, choice = "var", axes = 2)
+
+#Interés en la política
+```
+
+```{r}
+fviz_contrib(pca_1, choice = "var", axes = 3)
+
+#Evaluación
+```
+
+```{r}
+fviz_contrib(pca_1, choice = "var", axes = 4)
+
+```
+
+```{r}
+fviz_contrib(pca_1, choice = "var", axes = 5)
+
+```
+
+```{r}
+fviz_contrib(pca_1, choice = "var", axes = 6)
+```
+
+```{r}
+fviz_pca(pca_1, axes = c(1, 2), label = "var")
+```
+
+```{r}
+fviz_pca(pca_1, axes = c(1, 3), label = "var")
+```
+
+```{r}
+fviz_pca(pca_1, axes = c(2, 3), label = "var")
+```
+
+
+```{r}
+head(pca_1$ind$coord)
+```
+
+```{r}
+indice_base <- pca_1$ind$coord %>% 
+  as_tibble() %>%
+  mutate(indice_pca_1 = (Dim.1 * 33.06 + Dim.2 * 21.67) / 60.96736) 
+```
+
+```{r}
+
+```
+

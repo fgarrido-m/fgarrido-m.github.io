@@ -81,7 +81,7 @@ Por ejemplo, cuando una persona tiene una evaluación positiva de la guardia mun
 
 Esto nos lleva a plantear nuestro modelo que luego va a ser utilizado en el resto del trabajo:
 
-$$ParticipaciónJuntasdeVecinos = \alpha + \ Evaluación ServiciosX_1+ \\ Participación Elecciónes X_2 + Cohesión VecinalX_3 \\ Interés en Asuntos Políticos X_4 + Percepción de la Corrupción X_5+  \mu  $$
+$$ParticipaciónJuntasdeVecinos = \alpha + \ Evaluación ServiciosX_1+ \\ Participación Elecciónes X_2 + Cohesión VecinalX_3 \\ Interés en Asuntos Políticos X_4 +  \mu  $$
 
 Las variables de Evaluación de Servicios y  Cohesión Vecinal serán índices. Evaluación de Servicios implican las variables ya evaluadas, Cohesión Vecinal incluye preguntas respecto a la cantidad de números de teléfonos de vecinos que tiene el individuo (n_telefono), si le pide ayuda a vecinos en casos de necesidad (coop_vecinos) y nivel de confianza en los vecinos (confianza). Interés en Asuntos Políticos se medirá con la variable 'asuntos', que pregunta directamente esto y Participación Electoral se pregunta si se voto en las últimas elecciones en la variable 'voto'.
 
